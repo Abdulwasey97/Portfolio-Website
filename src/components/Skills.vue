@@ -65,5 +65,9 @@ const skills = ref([
 .card:hover {
   transform: translateY(-5px);
 }
+
+.progress-bar {
+  background-color: #4f7c82;
+}
 </style>
 

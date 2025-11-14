@@ -1,5 +1,6 @@
 <script setup>
 import Header from './components/Header.vue'
+import TechBanner from './components/TechBanner.vue'
 import Hero from './components/Hero.vue'
 import About from './components/About.vue'
 import Skills from './components/Skills.vue'
@@ -14,6 +15,7 @@ import Footer from './components/Footer.vue'
     
     <main class="flex-grow-1 main-content">
       <Hero />
+      <TechBanner />
       <About />
       <Skills />
       <Projects />
