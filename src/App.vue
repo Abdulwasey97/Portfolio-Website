@@ -1,11 +1,5 @@
 <script setup>
 import Header from './components/Header.vue'
-import TechBanner from './components/TechBanner.vue'
-import Hero from './components/Hero.vue'
-import About from './components/About.vue'
-import Skills from './components/Skills.vue'
-import Projects from './components/Projects.vue'
-import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 </script>
 
@@ -13,14 +7,11 @@ import Footer from './components/Footer.vue'
   <div id="app" class="d-flex flex-column min-vh-100">
     <Header />
     
-    <main class="flex-grow-1 main-content">
-      <Hero />
-      <TechBanner />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
     
     <Footer />
   </div>
@@ -31,8 +22,14 @@ import Footer from './components/Footer.vue'
   scroll-behavior: smooth;
 }
 
-.main-content {
-  margin-top: 0;
-  position: relative;
+/* Fade transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

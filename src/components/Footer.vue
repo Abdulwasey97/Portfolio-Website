@@ -14,11 +14,11 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <h5 class="footer-heading mb-3">Quick Links</h5>
               <ul class="footer-links list-unstyled">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><router-link to="/">Home</router-link></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#skills">Skills</a></li>
+                <li><router-link to="/projects">Projects</router-link></li>
+                <li><a href="/#contact">Contact</a></li>
               </ul>
             </div>
 
