@@ -4,6 +4,7 @@ import TechBanner from '../components/TechBanner.vue'
 import WhoAreWe from '../components/WhoAreWe.vue'
 import ServicesSection from '../components/ServicesSection.vue'
 import Projects from '../components/Projects.vue'
+import ClientSuccessStories from '../components/ClientSuccessStories.vue'
 import Contact from '../components/Contact.vue'
 </script>
 
@@ -14,6 +15,7 @@ import Contact from '../components/Contact.vue'
     <WhoAreWe />
     <ServicesSection />
     <Projects />
+    <ClientSuccessStories />
     <Contact />
   </main>
 </template>

@@ -161,21 +161,23 @@
             </div>
             
             <!-- Tech Stack Badges -->
-            <div class="tech-badge badge-1">
-              <span class="tech-logo">⚡</span>
-              <span class="tech-name">React</span>
-            </div>
-            <div class="tech-badge badge-2">
-              <span class="tech-logo">🔷</span>
-              <span class="tech-name">Node.js</span>
-            </div>
-            <div class="tech-badge badge-3">
-              <span class="tech-logo">🎯</span>
-              <span class="tech-name">Python</span>
-            </div>
-            <div class="tech-badge badge-4">
-              <span class="tech-logo">☁️</span>
-              <span class="tech-name">AWS</span>
+            <div class="tech-badges-container">
+              <div class="tech-badge badge-1">
+                <span class="tech-logo">⚡</span>
+                <span class="tech-name">React</span>
+              </div>
+              <div class="tech-badge badge-2">
+                <span class="tech-logo">🔷</span>
+                <span class="tech-name">Node.js</span>
+              </div>
+              <div class="tech-badge badge-3">
+                <span class="tech-logo">🎯</span>
+                <span class="tech-name">Python</span>
+              </div>
+              <div class="tech-badge badge-4">
+                <span class="tech-logo">☁️</span>
+                <span class="tech-name">AWS</span>
+              </div>
             </div>
           </div>
         </div>
@@ -947,58 +949,74 @@ onUnmounted(() => {
   transform: translateX(-50%);
 }
 
+/* Tech Stack Badges Container */
+.tech-badges-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 /* Tech Stack Badges */
 .tech-badge {
   position: absolute;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.75rem 1.25rem;
-  border-radius: 30px;
+  padding: 0.5rem 0.9rem;
+  border-radius: 25px;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
+  gap: 0.4rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #fff;
   animation: floatBadge 3s ease-in-out infinite;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .tech-badge:hover {
   background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-5px) scale(1.1);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(79, 124, 130, 0.3);
 }
 
 .tech-logo {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 .tech-name {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1;
 }
 
 .badge-1 {
-  top: 5%;
+  top: 8%;
   left: 5%;
   animation-delay: 0s;
 }
 
 .badge-2 {
-  top: 15%;
+  top: 18%;
   right: 5%;
   animation-delay: 0.7s;
 }
 
 .badge-3 {
-  bottom: 20%;
-  left: 0%;
+  bottom: 22%;
+  left: 3%;
   animation-delay: 1.4s;
 }
 
 .badge-4 {
-  bottom: 5%;
+  bottom: 8%;
   right: 10%;
   animation-delay: 2.1s;
 }
@@ -1008,7 +1026,7 @@ onUnmounted(() => {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-8px);
   }
 }
 
@@ -1089,6 +1107,35 @@ onUnmounted(() => {
     height: 45px;
   }
   
+  .tech-badge {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.85rem;
+  }
+  
+  .tech-logo {
+    font-size: 1rem;
+  }
+  
+  .badge-1 {
+    top: 4%;
+    left: 4%;
+  }
+  
+  .badge-2 {
+    top: 14%;
+    right: 4%;
+  }
+  
+  .badge-3 {
+    bottom: 18%;
+    left: 2%;
+  }
+  
+  .badge-4 {
+    bottom: 4%;
+    right: 8%;
+  }
+  
   .orbit-ring {
     width: 350px;
     height: 350px;
@@ -1159,8 +1206,32 @@ onUnmounted(() => {
   }
   
   .tech-badge {
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .tech-logo {
+    font-size: 0.95rem;
+  }
+  
+  .badge-1 {
+    top: 3%;
+    left: 3%;
+  }
+  
+  .badge-2 {
+    top: 13%;
+    right: 3%;
+  }
+  
+  .badge-3 {
+    bottom: 16%;
+    left: 2%;
+  }
+  
+  .badge-4 {
+    bottom: 3%;
+    right: 6%;
   }
   
   .orbit-ring {
@@ -1261,16 +1332,70 @@ onUnmounted(() => {
     display: none;
   }
   
-  .tech-badge {
-    position: relative;
-    margin: 0.5rem;
+  .visual-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
   }
   
-  .badge-1, .badge-2, .badge-3, .badge-4 {
+  .tech-badges-container {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    top: auto !important;
+    left: auto !important;
+  }
+  
+  .tech-badge {
+    position: relative !important;
+    margin: 0;
+    display: inline-flex;
     top: auto !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.75rem;
+    animation: floatBadgeMobile 3s ease-in-out infinite;
+  }
+  
+  .tech-logo {
+    font-size: 0.9rem;
+  }
+  
+  .badge-1 {
+    animation-delay: 0s;
+  }
+  
+  .badge-2 {
+    animation-delay: 0.7s;
+  }
+  
+  .badge-3 {
+    animation-delay: 1.4s;
+  }
+  
+  .badge-4 {
+    animation-delay: 2.1s;
+  }
+  
+  @keyframes floatBadgeMobile {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
   }
   
   .scroll-indicator {
