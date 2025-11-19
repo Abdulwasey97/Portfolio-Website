@@ -39,7 +39,7 @@
           <!-- CTA Buttons -->
           <div class="d-flex gap-3 flex-wrap hero-buttons mb-5">
             <a href="#contact" class="btn btn-custom shadow-lg">
-              <span class="btn-text">Start Your Project</span>
+              <span class="btn-text">Get a Quote </span>
               <span class="btn-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -81,6 +81,21 @@
             <!-- Floating Cards with Glassmorphism -->
             <div class="floating-card card-1">
               <div class="card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="8" cy="8" r="2"/>
+                  <circle cx="16" cy="6" r="2"/>
+                  <circle cx="16" cy="14" r="2"/>
+                  <path d="M10 8h4M16 8v4M8 10v4M10 14h4"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <div class="card-title">Artificial Intelligence</div>
+             
+              </div>
+            </div>
+            
+            <div class="floating-card card-2">
+              <div class="card-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="2" y="3" width="20" height="14" rx="2"/>
                   <path d="M8 21h8M12 17v4"/>
@@ -88,42 +103,59 @@
               </div>
               <div class="card-content">
                 <div class="card-title">Web Development</div>
-                <div class="card-status">
-                  <div class="status-dot"></div>
-                  <span>Active</span>
-                </div>
-              </div>
-            </div>
-            
-            <div class="floating-card card-2">
-              <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-              <div class="card-content">
-                <div class="card-title">Cloud Solutions</div>
-                <div class="card-status">
-                  <div class="status-dot"></div>
-                  <span>Deploying</span>
-                </div>
+              
               </div>
             </div>
             
             <div class="floating-card card-3">
               <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M12 16v-4M12 8h.01"/>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="7" y="3" width="10" height="18" rx="2"/>
+                  <circle cx="12" cy="17" r="1.5"/>
                 </svg>
               </div>
               <div class="card-content">
-                <div class="card-title">AI Integration</div>
-                <div class="card-status">
-                  <div class="status-dot"></div>
-                  <span>Processing</span>
-                </div>
+                <div class="card-title">Mobile Apps</div>
+               
+              </div>
+            </div>
+            
+            <div class="floating-card card-4">
+              <div class="card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2l5 8-5 12-5-12 5-8z"/>
+                  <circle cx="12" cy="11" r="1.5"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <div class="card-title">Graphic Designing</div>
+              
+              </div>
+            </div>
+            
+            <div class="floating-card card-5">
+              <div class="card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="5"/>
+                  <path d="M14 14l5 5"/>
+                  <path d="M9 11h4M11 9v4"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <div class="card-title">SEO Services</div>
+               
+              </div>
+            </div>
+            
+            <div class="floating-card card-6">
+              <div class="card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12c2.5-4 6.5-4 9 0s6.5 4 9 0-2.5-8-9-2-6.5 4-9 0 2.5-8 9-2"/>
+                </svg>
+              </div>
+              <div class="card-content">
+                <div class="card-title">DevOps</div>
+              
               </div>
             </div>
             
@@ -160,25 +192,7 @@
               </div>
             </div>
             
-            <!-- Tech Stack Badges -->
-            <div class="tech-badges-container">
-              <div class="tech-badge badge-1">
-                <span class="tech-logo">⚡</span>
-                <span class="tech-name">React</span>
-              </div>
-              <div class="tech-badge badge-2">
-                <span class="tech-logo">🔷</span>
-                <span class="tech-name">Node.js</span>
-              </div>
-              <div class="tech-badge badge-3">
-                <span class="tech-logo">🎯</span>
-                <span class="tech-name">Python</span>
-              </div>
-              <div class="tech-badge badge-4">
-                <span class="tech-logo">☁️</span>
-                <span class="tech-name">AWS</span>
-              </div>
-            </div>
+         
           </div>
         </div>
       </div>
@@ -193,11 +207,12 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const typedText = ref('');
 const techStack = [
-  'AI & Machine Learning',
-  'Cloud Architecture',
-  'Full-Stack Development',
-  'DevOps & CI/CD',
-  'Mobile Applications'
+  'Artificial Intelligence',
+  'Web Development',
+  'Mobile Apps',
+  'Graphic Designing',
+  'SEO Services',
+  'DevOps'
 ];
 let currentIndex = 0;
 let charIndex = 0;
@@ -786,16 +801,37 @@ onUnmounted(() => {
 }
 
 .card-2 {
-  top: 50%;
-  right: -5%;
-  animation-delay: 1.5s;
+  top: 18%;
+  right: -6%;
+  animation-delay: 0.8s;
   width: 260px;
 }
 
 .card-3 {
-  bottom: 10%;
-  left: 10%;
-  animation-delay: 3s;
+  top: 50%;
+  left: -10%;
+  animation-delay: 1.6s;
+  width: 260px;
+}
+
+.card-4 {
+  top: 42%;
+  right: -10%;
+  animation-delay: 2.4s;
+  width: 260px;
+}
+
+.card-5 {
+  bottom: 18%;
+  left: 0%;
+  animation-delay: 3.2s;
+  width: 260px;
+}
+
+.card-6 {
+  bottom: 6%;
+  right: 2%;
+  animation-delay: 4s;
   width: 260px;
 }
 
@@ -1191,18 +1227,33 @@ onUnmounted(() => {
   }
   
   .card-1 {
-    top: 5%;
-    left: 5%;
+    top: 2%;
+    left: 0%;
   }
   
   .card-2 {
-    top: 40%;
-    right: 5%;
+    top: 18%;
+    right: 0%;
   }
   
   .card-3 {
-    bottom: 5%;
-    left: 15%;
+    top: 38%;
+    left: -2%;
+  }
+  
+  .card-4 {
+    top: 56%;
+    right: -2%;
+  }
+  
+  .card-5 {
+    bottom: 18%;
+    left: 8%;
+  }
+  
+  .card-6 {
+    bottom: 4%;
+    right: 8%;
   }
   
   .tech-badge {
@@ -1276,6 +1327,15 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-content {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
   .hero-title {
     font-size: 2rem;
   }
@@ -1286,6 +1346,13 @@ onUnmounted(() => {
   
   .hero-subtitle {
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tech-stack {
+    justify-content: center;
   }
   
   .typing-text {
@@ -1296,6 +1363,31 @@ onUnmounted(() => {
     font-size: 1.3rem;
   }
   
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem !important;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  
+  .btn {
+    flex: 1;
+    min-width: 0;
+    max-width: 180px;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .btn-text {
+    white-space: nowrap;
+  }
+  
   .orb-1, .orb-2, .orb-3 {
     width: 300px;
     height: 300px;
@@ -1303,6 +1395,8 @@ onUnmounted(() => {
   
   .stats-row {
     gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
   }
   
   .stat-number {
@@ -1313,33 +1407,25 @@ onUnmounted(() => {
     height: 40px;
   }
   
+  .hero-visual-container {
+    display: none;
+  }
+  
   .visual-wrapper {
-    min-height: 400px;
+    display: none;
   }
   
   .floating-card {
-    position: relative !important;
-    width: 100% !important;
-    max-width: 280px;
-    margin: 1rem auto;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
+    display: none !important;
   }
   
   .central-visual {
     display: none;
   }
   
-  .visual-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem 1rem;
+  .row.align-items-center {
+    min-height: auto;
+    padding: 2rem 0;
   }
   
   .tech-badges-container {
@@ -1425,13 +1511,17 @@ onUnmounted(() => {
   }
   
   .hero-buttons {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    gap: 0.5rem;
   }
   
   .hero-buttons a {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     justify-content: center;
+    font-size: 0.85rem;
+    padding: 0.7rem 0.9rem;
   }
 }
 </style>
