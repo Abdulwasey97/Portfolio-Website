@@ -31,9 +31,7 @@
           
           <!-- Description -->
           <p class="lead mb-5 hero-description">
-            We craft cutting-edge digital experiences with AI-powered solutions, 
-            scalable cloud infrastructure, and innovative web technologies. 
-            Transform your business with next-generation software.
+            360° innovation—design, develop, deploy, scale.
           </p>
           
           <!-- CTA Buttons -->
@@ -56,23 +54,7 @@
             </a>
           </div>
           
-          <!-- Stats Counter -->
-          <div class="stats-row">
-            <div class="stat-item">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Projects Delivered</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <div class="stat-number">98%</div>
-              <div class="stat-label">Client Satisfaction</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">Support Available</div>
-            </div>
-          </div>
+        
         </div>
         
         <!-- Right Side - 3D Visual Elements -->
