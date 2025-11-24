@@ -1,19 +1,18 @@
 <template>
-  <section class="who-are-we-section">
+  <section id="who-we-are" class="who-are-we-section">
     <div class="container">
       <div class="row align-items-center">
         <!-- Left side - Title -->
-        <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+        <div class="col-lg-5 mb-4 mb-lg-0">
           <p class="section-subtitle">WHO ARE WE?</p>
-          <h2 class="section-title">
-            Innovative tech<br>
-            solutions for<br>
-            tomorrow <span class="weather-icons">💡</span>
-          </h2>
+          <h3 class="section-title">
+            From AI automation to custom software and web development,<br>
+             we empower businesses to accelerate innovation and improve operational efficiency.<br>
+          </h3>
         </div>
         
         <!-- Right side - Description -->
-        <div class="col-12 col-lg-7">
+        <div class="col-lg-7">
           <div class="description-content">
             <p class="description-text">
               We are a cutting-edge technology company dedicated to transforming businesses 
@@ -56,19 +55,15 @@ import { PRIMARY_COLOR } from '../config/colors'
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 1.2;
   color: #2d2d2d;
   margin-bottom: 0;
+  justify-content: left;
 }
 
-.weather-icons {
-  font-size: 2.5rem;
-  vertical-align: middle;
-  display: inline-block;
-  margin-left: 0.5rem;
-}
+
 
 .description-content {
   background: transparent;
@@ -140,86 +135,36 @@ import { PRIMARY_COLOR } from '../config/colors'
     padding: 3rem 0;
   }
   
-  .row.align-items-center {
-    text-align: center;
-  }
-  
-  .section-subtitle {
-    font-size: 0.8rem;
-    letter-spacing: 1.5px;
-    margin-bottom: 1.5rem;
-  }
-  
   .section-title {
     font-size: 2rem;
-    line-height: 1.3;
-    margin-bottom: 2rem;
-    text-align: left;
   }
   
   .weather-icons {
     font-size: 2rem;
-    margin-left: 0.25rem;
-  }
-  
-  .description-content {
-    padding-left: 0;
-    margin-top: 0;
-    text-align: left;
   }
   
   .description-text {
     font-size: 0.95rem;
-    line-height: 1.7;
     text-align: left;
-    margin-bottom: 2rem;
   }
   
   .btn-learn-more {
-    padding: 0.75rem 1.75rem;
+    padding: 0.75rem 1.5rem;
     font-size: 0.95rem;
-    width: auto;
-    display: inline-flex;
   }
 }
 
 @media (max-width: 576px) {
-  .who-are-we-section {
-    padding: 2.5rem 0;
-  }
-  
-  .section-subtitle {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-  }
-  
   .section-title {
     font-size: 1.75rem;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
   }
   
   .weather-icons {
     font-size: 1.5rem;
-    margin-left: 0.25rem;
-  }
-  
-  .description-content {
-    padding-left: 0;
   }
   
   .description-text {
     font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-  }
-  
-  .btn-learn-more {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
-    width: 100%;
-    justify-content: center;
   }
 }
 </style>

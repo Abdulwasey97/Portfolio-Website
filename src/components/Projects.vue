@@ -11,7 +11,14 @@
       <!-- Projects Grid (3 columns) -->
       <div class="row g-4 mb-5">
         <div class="col-lg-4 col-md-6" v-for="project in featuredProjects" :key="project.id">
-          <div class="project-card">
+          <div
+            class="project-card"
+            @click="openModal(project)"
+            @keydown.enter.prevent="openModal(project)"
+            @keydown.space.prevent="openModal(project)"
+            role="button"
+            tabindex="0"
+          >
             <div class="project-image-wrapper">
               <img 
                 :src="project.image" 
@@ -20,10 +27,10 @@
               />
               <div class="project-overlay">
                 <div class="overlay-buttons">
-                  <a :href="project.demo" class="overlay-btn demo-btn">
+                  <a :href="project.demo" class="overlay-btn demo-btn" @click.stop>
                     <i class="fas fa-external-link-alt"></i> Demo
                   </a>
-                  <a :href="project.code" class="overlay-btn code-btn">
+                  <a :href="project.code" class="overlay-btn code-btn" @click.stop>
                     <i class="fab fa-github"></i> Code
                   </a>
                 </div>
@@ -57,11 +64,18 @@
         </router-link>
       </div>
     </div>
+
+    <ProjectModal
+      :show="isModalOpen"
+      :project="selectedProject"
+      @close="closeModal"
+    />
   </section>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import ProjectModal from './ProjectModal.vue'
 
 // Featured projects - showing only 3 on home page
 const featuredProjects = ref([
@@ -93,6 +107,19 @@ const featuredProjects = ref([
     code: '#'
   }
 ])
+
+const selectedProject = ref(null)
+const isModalOpen = ref(false)
+
+const openModal = (project) => {
+  selectedProject.value = project
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+  selectedProject.value = null
+}
 </script>
 
 <style scoped>
@@ -137,6 +164,7 @@ const featuredProjects = ref([
   height: 100%;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .project-card:hover {

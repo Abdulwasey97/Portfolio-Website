@@ -16,7 +16,14 @@
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-4 col-md-6" v-for="project in allProjects" :key="project.id">
-            <div class="project-card">
+            <div
+              class="project-card"
+              @click="openModal(project)"
+              @keydown.enter.prevent="openModal(project)"
+              @keydown.space.prevent="openModal(project)"
+              role="button"
+              tabindex="0"
+            >
               <div class="project-image-wrapper">
                 <img 
                   :src="project.image" 
@@ -25,10 +32,10 @@
                 />
                 <div class="project-overlay">
                   <div class="overlay-buttons">
-                    <a :href="project.demo" class="overlay-btn demo-btn">
+                    <a :href="project.demo" class="overlay-btn demo-btn" @click.stop>
                       <i class="fas fa-external-link-alt"></i> Demo
                     </a>
-                    <a :href="project.code" class="overlay-btn code-btn">
+                    <a :href="project.code" class="overlay-btn code-btn" @click.stop>
                       <i class="fab fa-github"></i> Code
                     </a>
                   </div>
@@ -63,11 +70,18 @@
         </div>
       </div>
     </section>
+
+    <ProjectModal
+      :show="isModalOpen"
+      :project="selectedProject"
+      @close="closeModal"
+    />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import ProjectModal from '../components/ProjectModal.vue'
 
 const allProjects = ref([
   {
@@ -179,6 +193,19 @@ const allProjects = ref([
     code: '#'
   }
 ])
+
+const selectedProject = ref(null)
+const isModalOpen = ref(false)
+
+const openModal = (project) => {
+  selectedProject.value = project
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+  selectedProject.value = null
+}
 </script>
 
 <style scoped>
@@ -253,6 +280,7 @@ const allProjects = ref([
   height: 100%;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .project-card:hover {

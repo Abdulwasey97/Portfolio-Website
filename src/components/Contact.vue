@@ -6,19 +6,18 @@
           <!-- Left Column - Info Section -->
           <div class="col-lg-5">
             <div class="info-section">
-              <span class="section-label">ASK A QUESTION</span>
+             
               <h2 class="contact-title">
-                There are no wrong questions - ask away, we're all ears 
-                <span class="emoji">👂</span>
+                Let's create something exceptional together                
               </h2>
               <p class="contact-description">
-                Sometimes there are questions beyond just "what's the weather going to be like". 
-                Below are some of the most frequently questions we're asked!
+                Share the details of your project or ask us anything. Our team will respond within
+                one business day.
               </p>
-              <div class="contact-email">
+              <!-- <div class="contact-email">
                 <i class="fas fa-envelope"></i>
                 <span>support@myportfolio.com</span>
-              </div>
+              </div> -->
             </div>
           </div>
 

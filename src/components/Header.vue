@@ -23,17 +23,15 @@
               <router-link class="nav-link" to="/">Home</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/#about" @click="navigateToSection($event, '#about')">About</a>
+              <a class="nav-link" href="/#who-we-are" @click="navigateToSection($event, '#who-we-are')">About Us</a>
             </li>        
             <li class="nav-item">
-              <router-link class="nav-link" to="/projects">Projects</router-link>
+              <a class="nav-link" href="/#projects" @click="navigateToSection($event, '#projects')">Our Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/#contact" @click="navigateToSection($event, '#contact')">Contact</a>
+              <a class="nav-link" href="/#contact" @click="navigateToSection($event, '#contact')">Contact Us</a>
             </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/about-us">About Us</router-link>
-            </li>
+          
           </ul>
         </div>
       </div>

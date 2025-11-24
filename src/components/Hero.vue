@@ -31,13 +31,13 @@
           
           <!-- Description -->
           <p class="lead mb-5 hero-description">
-            360° innovation—design, develop, deploy, scale.
+            360° innovation—design, develop, deploy, scale
           </p>
           
           <!-- CTA Buttons -->
           <div class="d-flex gap-3 flex-wrap hero-buttons mb-5">
             <a href="#contact" class="btn btn-custom shadow-lg">
-              <span class="btn-text">Get a Quote </span>
+              <span class="btn-text">Get a Quote</span>
               <span class="btn-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -52,129 +52,22 @@
                 </svg>
               </span>
             </a>
-          </div>
-          
+          </div>       
         
         </div>
         
         <!-- Right Side - 3D Visual Elements -->
         <div class="col-lg-6 hero-visual-container">
           <div class="visual-wrapper">
-            <!-- Floating Cards with Glassmorphism -->
-            <div class="floating-card card-1">
-              <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="8" cy="8" r="2"/>
-                  <circle cx="16" cy="6" r="2"/>
-                  <circle cx="16" cy="14" r="2"/>
-                  <path d="M10 8h4M16 8v4M8 10v4M10 14h4"/>
-                </svg>
-              </div>
-              <div class="card-content">
-                <div class="card-title">Artificial Intelligence</div>
-             
+            <!-- Holographic Systems Canvas -->
+            <div class="holo-canvas">
+              <div class="holo-core">
+                <div class="core-glow"></div>
+                <div class="core-shell"></div>
+                <div class="core-pulse"></div>                
+                <div class="core-grid"></div>
               </div>
             </div>
-            
-            <div class="floating-card card-2">
-              <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/>
-                  <path d="M8 21h8M12 17v4"/>
-                </svg>
-              </div>
-              <div class="card-content">
-                <div class="card-title">Web Development</div>
-              
-              </div>
-            </div>
-            
-            <div class="floating-card card-3">
-              <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="7" y="3" width="10" height="18" rx="2"/>
-                  <circle cx="12" cy="17" r="1.5"/>
-                </svg>
-              </div>
-              <div class="card-content">
-                <div class="card-title">Mobile Apps</div>
-               
-              </div>
-            </div>
-            
-            <div class="floating-card card-4">
-              <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2l5 8-5 12-5-12 5-8z"/>
-                  <circle cx="12" cy="11" r="1.5"/>
-                </svg>
-              </div>
-              <div class="card-content">
-                <div class="card-title">Graphic Designing</div>
-              
-              </div>
-            </div>
-            
-            <div class="floating-card card-5">
-              <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="5"/>
-                  <path d="M14 14l5 5"/>
-                  <path d="M9 11h4M11 9v4"/>
-                </svg>
-              </div>
-              <div class="card-content">
-                <div class="card-title">SEO Services</div>
-               
-              </div>
-            </div>
-            
-            <div class="floating-card card-6">
-              <div class="card-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12c2.5-4 6.5-4 9 0s6.5 4 9 0-2.5-8-9-2-6.5 4-9 0 2.5-8 9-2"/>
-                </svg>
-              </div>
-              <div class="card-content">
-                <div class="card-title">DevOps</div>
-              
-              </div>
-            </div>
-            
-            <!-- Central 3D Element -->
-            <div class="central-visual">
-              <div class="cube-container">
-                <div class="cube">
-                  <div class="cube-face front"></div>
-                  <div class="cube-face back"></div>
-                  <div class="cube-face right"></div>
-                  <div class="cube-face left"></div>
-                  <div class="cube-face top"></div>
-                  <div class="cube-face bottom"></div>
-                </div>
-              </div>
-              
-              <!-- Orbiting Elements -->
-              <div class="orbit-ring">
-                <div class="orbit-item orbit-1">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  </svg>
-                </div>
-                <div class="orbit-item orbit-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z"/>
-                  </svg>
-                </div>
-                <div class="orbit-item orbit-3">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            
-         
           </div>
         </div>
       </div>
@@ -189,13 +82,18 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const typedText = ref('');
 const techStack = [
-  'Artificial Intelligence',
-  'Web Development',
-  'Mobile Apps',
-  'Graphic Designing',
-  'SEO Services',
-  'DevOps'
+  'AI & Machine Learning',
+  'Cloud Architecture',
+  'Full-Stack Development',
+  'DevOps & CI/CD',
+  'Mobile Applications'
 ];
+const orbitLabels = [
+  'Cloud Mesh',
+  'Zero Trust Layer',
+  'Neural Insights'
+];
+
 let currentIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -689,19 +587,26 @@ onUnmounted(() => {
 
 /* Visual Container - Right Side */
 .hero-visual-container {
-  animation: fadeInRight 1.2s ease-out 0.6s both;
+  animation: systemReveal 1.6s cubic-bezier(0.19, 1, 0.22, 1) 0.35s both;
   position: relative;
   z-index: 2;
 }
 
-@keyframes fadeInRight {
-  from {
+@keyframes systemReveal {
+  0% {
     opacity: 0;
-    transform: translateX(50px);
+    transform: perspective(800px) translate3d(80px, 40px, -120px) rotateX(12deg) rotateY(-10deg) scale(0.8);
+    filter: blur(18px);
   }
-  to {
+  60% {
     opacity: 1;
-    transform: translateX(0);
+    transform: perspective(800px) translate3d(-10px, -8px, 0) rotateX(-3deg) rotateY(6deg) scale(1.04);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(800px) translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1);
+    filter: blur(0);
   }
 }
 
@@ -713,306 +618,389 @@ onUnmounted(() => {
   justify-content: center;
 }
 
-/* Glassmorphic Floating Cards */
-.floating-card {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: floatCard 4s ease-in-out infinite;
-  transition: all 0.4s ease;
-  cursor: pointer;
-}
-
-.floating-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 25px 70px rgba(79, 124, 130, 0.4);
-}
-
-.card-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #4f7c82 0%, #6a9ca3 100%);
-  border-radius: 12px;
+/* Holographic Canvas */
+.holo-canvas {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  flex-shrink: 0;
+  isolation: isolate;
+  margin-left:100px;
 }
 
-.card-content {
+.holo-core {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 209, 197, 0.35), rgba(12, 34, 39, 0.8));
+  box-shadow: 0 0 80px rgba(79, 209, 197, 0.3),
+    inset 0 0 40px rgba(79, 124, 130, 0.5);
+  animation: corePulse 6s ease-in-out infinite;
+}
+
+.core-glow,
+.core-shell,
+.core-pulse,
+.core-beam,
+.core-grid {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.core-shell {
+  border: 1px solid rgba(133, 177, 184, 0.4);
+  animation: ringRotate 18s linear infinite;
+}
+
+.core-glow {
+  filter: blur(40px);
+  background: radial-gradient(circle, rgba(79, 209, 197, 0.6), transparent 70%);
+  opacity: 0.7;
+}
+
+.core-pulse {
+  border: 2px solid rgba(79, 209, 197, 0.4);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.core-beam {
+  background: linear-gradient(180deg, rgba(133, 177, 184, 0.15), transparent);
+  mask-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.9), transparent 70%);
+  animation: beamSweep 6s linear infinite;
+}
+
+.core-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+  mask-image: radial-gradient(circle, white, transparent 65%);
+  opacity: 0.3;
+  animation: gridMove 12s linear infinite;
+}
+
+@keyframes corePulse {
+  0%, 100% {
+    transform: scale(0.98);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+}
+
+/* Orbital Field */
+.orbital-field {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbital-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(79, 124, 130, 0.3);
+  border-radius: 50%;
+  animation: ringRotate 14s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbital-ring:nth-child(2) {
+  width: 320px;
+  height: 320px;
+  animation-duration: 10s;
+}
+
+.orbital-ring:nth-child(3) {
+  width: 240px;
+  height: 240px;
+  animation-duration: 8s;
+}
+
+.ring-label {
+  position: absolute;
+  top: -18px;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(7, 28, 32, 0.8);
+  border: 1px solid rgba(79, 209, 197, 0.4);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #bfe9ee;
+}
+
+@keyframes ringRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Signal Columns */
+.signal-columns {
+  position: absolute;
+  right: 4%;
+  top: 15%;
+  width: 160px;
+  height: 70%;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.signal-bar {
   flex: 1;
+  display: block;
+  background: linear-gradient(180deg, rgba(133, 177, 184, 0.05), rgba(79, 209, 197, 0.8));
+  border-radius: 999px;
+  box-shadow: 0 0 20px rgba(79, 209, 197, 0.4);
+  animation: signalDance 3s ease-in-out infinite;
+  opacity: 0.8;
 }
 
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.5rem;
+@keyframes signalDance {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
-.card-status {
+/* Status Pills */
+.status-pill-grid {
+  position: absolute;
+  left: -5%;
+  bottom: 8%;
+  width: 260px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.status-pill {
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  background: rgba(7, 28, 32, 0.85);
+  border: 1px solid rgba(79, 124, 130, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  animation: pillGlow 4s ease-in-out infinite;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.status-pill:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+
+.pill-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7eced3;
+}
+
+.pill-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f0feff;
+}
+
+@keyframes pillGlow {
+  0%, 100% {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 12px 40px rgba(79, 209, 197, 0.35);
+  }
+}
+
+/* Decorative Grid */
+.holo-grid {
+  position: absolute;
+  inset: 10%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  opacity: 0.35;
+}
+
+.grid-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(133, 177, 184, 0.4);
+  justify-self: center;
+  align-self: center;
+  animation: dotBlink 3s linear infinite;
+}
+
+.grid-dot:nth-child(odd) {
+  animation-delay: 0.6s;
+}
+
+@keyframes dotBlink {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* AI Diagnostics Stream */
+.ai-diagnostics {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  mix-blend-mode: screen;
+}
+
+.diagnostic-lines {
+  position: absolute;
+  right: -30px;
+  top: 10%;
+  width: 140px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.diag-line {
+  display: block;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(133, 177, 184, 0.2), rgba(79, 209, 197, 0.9), rgba(133, 177, 184, 0.2), transparent);
+  animation: dataFlow 2.8s linear infinite;
+  opacity: 0;
+}
+
+@keyframes dataFlow {
+  0% {
+    transform: translateX(80px) scaleX(0.2);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-40px) scaleX(1.05);
+    opacity: 0;
+  }
+}
+
+.diagnostic-feed {
+  position: absolute;
+  right: -5%;
+  bottom: 5%;
+  width: 240px;
+  padding: 1.25rem;
+  background: rgba(7, 28, 32, 0.75);
+  border: 1px solid rgba(79, 124, 130, 0.4);
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  animation: feedReveal 0.8s ease-out 1s both;
+}
+
+@keyframes feedReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.feed-row {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.85rem;
-  color: #b8c5d6;
+  margin-bottom: 0.75rem;
+  color: #dfe9f1;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background: #00ff88;
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
+.feed-row:last-child {
+  margin-bottom: 0;
 }
 
-.card-1 {
-  top: 10%;
-  left: -5%;
-  animation-delay: 0s;
-  width: 260px;
+.feed-label {
+  font-weight: 600;
+  color: #7eced3;
 }
 
-.card-2 {
-  top: 18%;
-  right: -6%;
-  animation-delay: 0.8s;
-  width: 260px;
-}
-
-.card-3 {
-  top: 50%;
-  left: -10%;
-  animation-delay: 1.6s;
-  width: 260px;
-}
-
-.card-4 {
-  top: 42%;
-  right: -10%;
-  animation-delay: 2.4s;
-  width: 260px;
-}
-
-.card-5 {
-  bottom: 18%;
-  left: 0%;
-  animation-delay: 3.2s;
-  width: 260px;
-}
-
-.card-6 {
-  bottom: 6%;
-  right: 2%;
-  animation-delay: 4s;
-  width: 260px;
-}
-
-@keyframes floatCard {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-/* Central 3D Visual Element */
-.central-visual {
+.feed-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(133, 177, 184, 0.15);
+  overflow: hidden;
   position: relative;
-  width: 300px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* 3D Rotating Cube */
-.cube-container {
-  width: 150px;
-  height: 150px;
-  perspective: 1000px;
+.feed-progress {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(79, 124, 130, 0), rgba(79, 209, 197, 1), rgba(133, 177, 184, 0));
+  animation: feedPulse 2.6s ease-in-out infinite;
 }
 
-.cube {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: rotateCube 20s infinite linear;
-}
-
-@keyframes rotateCube {
+@keyframes feedPulse {
   0% {
-    transform: rotateX(0deg) rotateY(0deg);
+    transform: translateX(-80%) scaleX(0.2);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
   }
   100% {
-    transform: rotateX(360deg) rotateY(360deg);
+    transform: translateX(60%) scaleX(1);
+    opacity: 0;
   }
 }
 
-.cube-face {
+.feed-value {
+  font-weight: 700;
+  color: #8ffff6;
+}
+
+.scan-beam {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  background: rgba(79, 124, 130, 0.1);
-  border: 2px solid rgba(79, 124, 130, 0.3);
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.7);
+  inset: 0;
+  background: linear-gradient(120deg, transparent 45%, rgba(79, 209, 197, 0.12) 50%, transparent 55%);
+  animation: beamSweep 4s linear infinite;
 }
 
-.front {
-  transform: rotateY(0deg) translateZ(75px);
-  background: linear-gradient(135deg, rgba(79, 124, 130, 0.2), rgba(106, 156, 163, 0.2));
-}
-
-.back {
-  transform: rotateY(180deg) translateZ(75px);
-  background: linear-gradient(135deg, rgba(106, 156, 163, 0.2), rgba(133, 177, 184, 0.2));
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(75px);
-  background: linear-gradient(135deg, rgba(58, 101, 112, 0.2), rgba(79, 124, 130, 0.2));
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(75px);
-  background: linear-gradient(135deg, rgba(90, 140, 148, 0.2), rgba(106, 156, 163, 0.2));
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(75px);
-  background: linear-gradient(135deg, rgba(79, 209, 197, 0.2), rgba(79, 124, 130, 0.2));
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(75px);
-  background: linear-gradient(135deg, rgba(79, 124, 130, 0.2), rgba(58, 101, 112, 0.2));
-}
-
-/* Orbit Ring with Icons */
-.orbit-ring {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border: 2px dashed rgba(79, 124, 130, 0.3);
-  border-radius: 50%;
-  animation: rotateOrbit 30s linear infinite;
-}
-
-@keyframes rotateOrbit {
-  from {
-    transform: rotate(0deg);
+@keyframes beamSweep {
+  0% {
+    transform: translateX(-100%) skewX(-5deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateX(0) skewX(0deg);
   }
-}
-
-.orbit-item {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: rgba(79, 124, 130, 0.15);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(79, 124, 130, 0.4);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #85b1b8;
-  animation: counterRotate 30s linear infinite;
-  box-shadow: 0 10px 30px rgba(79, 124, 130, 0.3);
-}
-
-@keyframes counterRotate {
-  from {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(100%) skewX(5deg);
   }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.orbit-1 {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.orbit-2 {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-.orbit-3 {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Tech Stack Badges Container */
-.tech-badges-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-/* Tech Stack Badges */
-.tech-badge {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 0.9rem;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #fff;
-  animation: floatBadge 3s ease-in-out infinite;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  z-index: 10;
-  pointer-events: auto;
-}
-
-.tech-badge:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 30px rgba(79, 124, 130, 0.3);
-}
-
-.tech-logo {
-  font-size: 1.1rem;
-  line-height: 1;
-}
-
-.tech-name {
-  font-size: 0.8rem;
-  line-height: 1;
 }
 
 .badge-1 {
@@ -1209,33 +1197,18 @@ onUnmounted(() => {
   }
   
   .card-1 {
-    top: 2%;
-    left: 0%;
+    top: 5%;
+    left: 5%;
   }
   
   .card-2 {
-    top: 18%;
-    right: 0%;
+    top: 40%;
+    right: 5%;
   }
   
   .card-3 {
-    top: 38%;
-    left: -2%;
-  }
-  
-  .card-4 {
-    top: 56%;
-    right: -2%;
-  }
-  
-  .card-5 {
-    bottom: 18%;
-    left: 8%;
-  }
-  
-  .card-6 {
-    bottom: 4%;
-    right: 8%;
+    bottom: 5%;
+    left: 15%;
   }
   
   .tech-badge {
@@ -1309,15 +1282,6 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    padding: 2rem 0;
-  }
-  
-  .hero-content {
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  
   .hero-title {
     font-size: 2rem;
   }
@@ -1328,13 +1292,6 @@ onUnmounted(() => {
   
   .hero-subtitle {
     font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .tech-stack {
-    justify-content: center;
   }
   
   .typing-text {
@@ -1345,31 +1302,6 @@ onUnmounted(() => {
     font-size: 1.3rem;
   }
   
-  .hero-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 2rem !important;
-  }
-  
-  .hero-buttons {
-    justify-content: center;
-    gap: 0.75rem;
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-  
-  .btn {
-    flex: 1;
-    min-width: 0;
-    max-width: 180px;
-    font-size: 0.9rem;
-    padding: 0.75rem 1rem;
-  }
-  
-  .btn-text {
-    white-space: nowrap;
-  }
-  
   .orb-1, .orb-2, .orb-3 {
     width: 300px;
     height: 300px;
@@ -1377,8 +1309,6 @@ onUnmounted(() => {
   
   .stats-row {
     gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
   }
   
   .stat-number {
@@ -1389,25 +1319,33 @@ onUnmounted(() => {
     height: 40px;
   }
   
-  .hero-visual-container {
-    display: none;
-  }
-  
   .visual-wrapper {
-    display: none;
+    min-height: 400px;
   }
   
   .floating-card {
-    display: none !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 280px;
+    margin: 1rem auto;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
   }
   
   .central-visual {
     display: none;
   }
   
-  .row.align-items-center {
-    min-height: auto;
-    padding: 2rem 0;
+  .visual-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
   }
   
   .tech-badges-container {
@@ -1493,18 +1431,15 @@ onUnmounted(() => {
   }
   
   .hero-buttons {
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    gap: 0.5rem;
   }
   
   .hero-buttons a {
-    flex: 1;
-    min-width: 0;
+    width: 100%;
     justify-content: center;
-    font-size: 0.85rem;
-    padding: 0.7rem 0.9rem;
   }
 }
 </style>
+
 

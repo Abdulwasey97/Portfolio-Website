@@ -4,7 +4,7 @@
       <div class="tech-banner-content">
         <div class="tech-banner-left">
           <p class="tech-banner-text">
-            Experienced in a wide range of technologies, delivering innovative and reliable solutions
+            Our expertise spans the following technologies.
           </p>
         </div>
         <div class="tech-banner-right">
@@ -163,15 +163,15 @@ const techLogos = ref([
   height: 50px;
   width: auto;
   max-width: 100px;
-  opacity: 0.4;
-  filter: grayscale(100%) brightness(0.8);
-  transition: all 0.3s ease;
+  opacity: 1;
+  filter: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
   object-fit: contain;
 }
 
 .logo-item:hover .tech-logo {
-  opacity: 0.6;
-  filter: grayscale(100%) brightness(0.7);
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
 }
 
 /* Responsive adjustments */
