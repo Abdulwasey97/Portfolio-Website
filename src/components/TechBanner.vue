@@ -39,8 +39,12 @@ const techLogos = ref([
     src: 'https://cdn.simpleicons.org/laravel/FF2D20'
   },
   {
-    name: '.NET',
+    name: 'ASP .NET',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg'
+  },
+  {
+    name: '.Net Core',
+    src: 'https://img.icons8.com/color/1200/net-framework.jpg'
   },
   {
     name: 'Vue.js',

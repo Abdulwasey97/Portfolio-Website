@@ -48,9 +48,12 @@
               <h5 class="footer-heading mb-3">Contact Us</h5>
               <ul class="footer-links contact-info list-unstyled">
                 <li class="contact-detail">
-                  <strong>Email:</strong><br>
+                  <strong>Emails:</strong><br>
                   <a href="mailto:abdulwaseyjaved@yahoo.com" class="email-link">
                     abdulwaseyjaved@yahoo.com
+                  </a>
+                  <a href="mailto:hassanofficial525@gmail.com" class="email-link">
+                    hassanofficial525@gmail.com
                   </a>
                   <div class="social-icons mt-3" aria-label="Follow on social media">
                     <a

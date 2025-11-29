@@ -197,16 +197,6 @@
     },
     {
       "id": 20,
-      "title": "Wollongong Car Mechanic Website",
-      "description": "A modern, service-focused mechanic website built with WordPress and Elementor, featuring detailed service pages, booking functionality, and a clean layout tailored for automotive businesses.",
-      "image": "/ToolFlame (1).webp",
-      "technologies": ["WordPress", "Elementor", "PHP"],
-      "demo": "#",
-      "code": "#",
-      "featured": false
-    },
-    {
-      "id": 21,
       "title": "IOOFPM – Odd Fellows Organization Website",
       "description": "A WordPress-based website built with Elementor for the Independent Order of the Odd Fellows, showcasing their mission, community programs, membership details, and organizational activities with a clean and informative layout.",
       "image": "/ioofpm-org.webp",
