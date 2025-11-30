@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import AboutUs from '../views/AboutUs.vue'
 import ProjectsPage from '../views/ProjectsPage.vue'
+import CaseStudiesPage from '../views/CaseStudiesPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +21,11 @@ const router = createRouter({
       path: '/projects',
       name: 'projects',
       component: ProjectsPage
+    },
+    {
+      path: '/case-studies',
+      name: 'case-studies',
+      component: CaseStudiesPage
     }
   ],
   scrollBehavior(to, from, savedPosition) {

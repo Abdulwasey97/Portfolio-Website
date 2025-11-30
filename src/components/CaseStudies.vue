@@ -1,49 +1,49 @@
 <template>
-  <section id="projects" class="projects-section">
+  <section id="case-studies" class="case-studies-section">
     <div class="container">
       <!-- Section Header -->
       <div class="section-header text-center mb-5">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">A showcase of my recent work and creative solutions</p>
+        <h2 class="section-title">Featured Case Studies</h2>
+        <p class="section-subtitle">Real-world solutions and successful client implementations</p>
         <div class="title-underline"></div>
       </div>
 
-      <!-- Projects Grid (3 columns) -->
+      <!-- Case Studies Grid (3 columns) -->
       <div class="row g-4 mb-5">
-        <div class="col-lg-4 col-md-6" v-for="project in featuredProjects" :key="project.id">
+        <div class="col-lg-4 col-md-6" v-for="caseStudy in featuredCaseStudies" :key="caseStudy.id">
           <div
-            class="project-card"
-            @click="openModal(project)"
-            @keydown.enter.prevent="openModal(project)"
-            @keydown.space.prevent="openModal(project)"
+            class="case-study-card"
+            @click="openModal(caseStudy)"
+            @keydown.enter.prevent="openModal(caseStudy)"
+            @keydown.space.prevent="openModal(caseStudy)"
             role="button"
             tabindex="0"
           >
-            <div class="project-image-wrapper">
+            <div class="case-study-image-wrapper">
               <img 
-                :src="project.image" 
-                class="project-image" 
-                :alt="project.title"
+                :src="caseStudy.image" 
+                class="case-study-image" 
+                :alt="caseStudy.title"
               />
-              <div class="project-overlay">
+              <div class="case-study-overlay">
                 <div class="overlay-buttons">
-                  <a :href="project.demo" class="overlay-btn demo-btn" @click.stop>
-                    <i class="fas fa-external-link-alt"></i> Demo
+                  <a :href="caseStudy.demo" class="overlay-btn demo-btn" @click.stop>
+                    <i class="fas fa-external-link-alt"></i> View Case
                   </a>
-                  <a :href="project.code" class="overlay-btn code-btn" @click.stop>
-                    <i class="fab fa-github"></i> Code
+                  <a :href="caseStudy.code" class="overlay-btn code-btn" @click.stop>
+                    <i class="fas fa-file-alt"></i> Details
                   </a>
                 </div>
               </div>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">{{ project.title }}</h3>
-              <p class="project-description">{{ project.description }}</p>
+            <div class="case-study-content">
+              <h3 class="case-study-title">{{ caseStudy.title }}</h3>
+              <p class="case-study-description">{{ caseStudy.description }}</p>
               <div class="tech-stack">
                 <span class="tech-label">Tech Stack:</span>
                 <div class="tech-tags">
                   <span 
-                    v-for="tech in project.technologies" 
+                    v-for="tech in caseStudy.technologies" 
                     :key="tech"
                     class="tech-tag"
                   >
@@ -51,6 +51,7 @@
                   </span>
                 </div>
               </div>
+            
             </div>
           </div>
         </div>
@@ -58,8 +59,8 @@
 
       <!-- See More Button -->
       <div class="text-center">
-        <router-link to="/projects" class="see-more-btn">
-          <span>See More Projects</span>
+        <router-link to="/case-studies" class="see-more-btn">
+          <span>See More Case Studies</span>
           <i class="fas fa-arrow-right"></i>
         </router-link>
       </div>
@@ -67,7 +68,7 @@
 
     <ProjectModal
       :show="isModalOpen"
-      :project="selectedProject"
+      :project="selectedCaseStudy"
       @close="closeModal"
     />
   </section>
@@ -76,31 +77,31 @@
 <script setup>
 import { ref, computed } from 'vue'
 import ProjectModal from './ProjectModal.vue'
-import projectsData from '../data/projects.json'
+import caseStudiesData from '../data/caseStudies.json'
 
-// Featured projects - showing only featured projects on home page
-const featuredProjects = computed(() => {
-  return projectsData.projects.filter(project => project.featured === true)
+// Featured case studies - showing only featured case studies on home page
+const featuredCaseStudies = computed(() => {
+  return caseStudiesData.caseStudies.filter(caseStudy => caseStudy.featured === true)
 })
 
-const selectedProject = ref(null)
+const selectedCaseStudy = ref(null)
 const isModalOpen = ref(false)
 
-const openModal = (project) => {
-  selectedProject.value = project
+const openModal = (caseStudy) => {
+  selectedCaseStudy.value = caseStudy
   isModalOpen.value = true
 }
 
 const closeModal = () => {
   isModalOpen.value = false
-  selectedProject.value = null
+  selectedCaseStudy.value = null
 }
 </script>
 
 <style scoped>
-.projects-section {
+.case-studies-section {
   padding: 100px 0;
-  background: #ffffff;
+  background: #f8f9fa;
 }
 
 /* Section Header */
@@ -129,8 +130,8 @@ const closeModal = () => {
   border-radius: 2px;
 }
 
-/* Project Card */
-.project-card {
+/* Case Study Card */
+.case-study-card {
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
@@ -142,31 +143,31 @@ const closeModal = () => {
   cursor: pointer;
 }
 
-.project-card:hover {
+.case-study-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 40px rgba(79, 124, 130, 0.15);
 }
 
-/* Project Image */
-.project-image-wrapper {
+/* Case Study Image */
+.case-study-image-wrapper {
   position: relative;
   overflow: hidden;
   height: 240px;
 }
 
-.project-image {
+.case-study-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image {
+.case-study-card:hover .case-study-image {
   transform: scale(1.1);
 }
 
 /* Overlay */
-.project-overlay {
+.case-study-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -180,7 +181,7 @@ const closeModal = () => {
   transition: opacity 0.3s ease;
 }
 
-.project-card:hover .project-overlay {
+.case-study-card:hover .case-study-overlay {
   opacity: 1;
 }
 
@@ -223,22 +224,22 @@ const closeModal = () => {
   transform: translateY(-2px);
 }
 
-/* Project Content */
-.project-content {
+/* Case Study Content */
+.case-study-content {
   padding: 1.75rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.project-title {
+.case-study-title {
   font-size: 1.4rem;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 0.75rem;
 }
 
-.project-description {
+.case-study-description {
   font-size: 0.95rem;
   color: #666;
   line-height: 1.6;
@@ -248,7 +249,7 @@ const closeModal = () => {
 
 /* Tech Stack */
 .tech-stack {
-  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
 .tech-label {
@@ -283,6 +284,26 @@ const closeModal = () => {
   background: #4f7c82;
   color: #ffffff;
   transform: translateY(-2px);
+}
+
+/* Client Info */
+.case-study-client {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(79, 124, 130, 0.1);
+}
+
+.client-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.client-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4f7c82;
 }
 
 /* See More Button */
@@ -321,13 +342,13 @@ const closeModal = () => {
     font-size: 2.25rem;
   }
 
-  .project-card {
+  .case-study-card {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (max-width: 767px) {
-  .projects-section {
+  .case-studies-section {
     padding: 60px 0;
   }
 
@@ -335,7 +356,7 @@ const closeModal = () => {
     font-size: 1.875rem;
   }
 
-  .project-image-wrapper {
+  .case-study-image-wrapper {
     height: 200px;
   }
 

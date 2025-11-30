@@ -1,60 +1,68 @@
 <template>
-  <div class="projects-page">
+  <div class="case-studies-page">
     <!-- Hero Section -->
     <section class="page-hero">
       <div class="container">
         <div class="hero-content text-center">
-          <h1 class="hero-title">All Projects</h1>
-          <p class="hero-subtitle">Explore my complete portfolio of creative solutions and innovative work</p>
+          <h1 class="hero-title">All Case Studies</h1>
+          <p class="hero-subtitle">Explore real-world solutions and successful client implementations</p>
           <div class="title-underline"></div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Grid Section -->
-    <section class="projects-grid-section">
+    <!-- Case Studies Grid Section -->
+    <section class="case-studies-grid-section">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-4 col-md-6" v-for="project in allProjects" :key="project.id">
+          <div class="col-lg-4 col-md-6" v-for="caseStudy in allCaseStudies" :key="caseStudy.id">
             <div
-              class="project-card"
-              @click="openModal(project)"
-              @keydown.enter.prevent="openModal(project)"
-              @keydown.space.prevent="openModal(project)"
+              class="case-study-card"
+              @click="openModal(caseStudy)"
+              @keydown.enter.prevent="openModal(caseStudy)"
+              @keydown.space.prevent="openModal(caseStudy)"
               role="button"
               tabindex="0"
             >
-              <div class="project-image-wrapper">
+              <div class="case-study-image-wrapper">
                 <img 
-                  :src="project.image" 
-                  class="project-image" 
-                  :alt="project.title"
+                  :src="caseStudy.image" 
+                  class="case-study-image" 
+                  :alt="caseStudy.title"
                 />
-                <div class="project-overlay">
+                <div class="case-study-overlay">
                   <div class="overlay-buttons">
-                    <a :href="project.demo" class="overlay-btn demo-btn" @click.stop>
-                      <i class="fas fa-external-link-alt"></i> Demo
+                    <a :href="caseStudy.demo" class="overlay-btn demo-btn" @click.stop>
+                      <i class="fas fa-external-link-alt"></i> View Case
                     </a>
-                    <a :href="project.code" class="overlay-btn code-btn" @click.stop>
-                      <i class="fab fa-github"></i> Code
+                    <a :href="caseStudy.code" class="overlay-btn code-btn" @click.stop>
+                      <i class="fas fa-file-alt"></i> Details
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-content">
-                <h3 class="project-title">{{ project.title }}</h3>
-                <p class="project-description">{{ project.description }}</p>
+              <div class="case-study-content">
+                <h3 class="case-study-title">{{ caseStudy.title }}</h3>
+                <p class="case-study-description">{{ caseStudy.description }}</p>
                 <div class="tech-stack">
                   <span class="tech-label">Tech Stack:</span>
                   <div class="tech-tags">
                     <span 
-                      v-for="tech in project.technologies" 
+                      v-for="tech in caseStudy.technologies" 
                       :key="tech"
                       class="tech-tag"
                     >
                       {{ tech }}
                     </span>
                   </div>
+                </div>
+                <div v-if="caseStudy.client" class="case-study-client">
+                  <span class="client-label">Client:</span>
+                  <span class="client-name">{{ caseStudy.client }}</span>
+                </div>
+                <div v-if="caseStudy.results" class="case-study-results">
+                  <span class="results-label">Results:</span>
+                  <span class="results-text">{{ caseStudy.results }}</span>
                 </div>
               </div>
             </div>
@@ -73,7 +81,7 @@
 
     <ProjectModal
       :show="isModalOpen"
-      :project="selectedProject"
+      :project="selectedCaseStudy"
       @close="closeModal"
     />
   </div>
@@ -82,26 +90,26 @@
 <script setup>
 import { ref } from 'vue'
 import ProjectModal from '../components/ProjectModal.vue'
-import projectsData from '../data/projects.json'
+import caseStudiesData from '../data/caseStudies.json'
 
-const allProjects = ref(projectsData.projects)
+const allCaseStudies = ref(caseStudiesData.caseStudies)
 
-const selectedProject = ref(null)
+const selectedCaseStudy = ref(null)
 const isModalOpen = ref(false)
 
-const openModal = (project) => {
-  selectedProject.value = project
+const openModal = (caseStudy) => {
+  selectedCaseStudy.value = caseStudy
   isModalOpen.value = true
 }
 
 const closeModal = () => {
   isModalOpen.value = false
-  selectedProject.value = null
+  selectedCaseStudy.value = null
 }
 </script>
 
 <style scoped>
-.projects-page {
+.case-studies-page {
   background: #ffffff;
   min-height: 100vh;
 }
@@ -109,7 +117,6 @@ const closeModal = () => {
 /* Page Hero */
 .page-hero {
   padding: 120px 0 80px;
-  /* background: linear-gradient(135deg, rgba(79, 124, 130, 0.05) 0%, rgba(106, 156, 163, 0.05) 100%); */
   position: relative;
 }
 
@@ -157,13 +164,13 @@ const closeModal = () => {
   border-radius: 2px;
 }
 
-/* Projects Grid Section */
-.projects-grid-section {
+/* Case Studies Grid Section */
+.case-studies-grid-section {
   padding: 80px 0;
 }
 
-/* Project Card */
-.project-card {
+/* Case Study Card */
+.case-study-card {
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
@@ -175,31 +182,31 @@ const closeModal = () => {
   cursor: pointer;
 }
 
-.project-card:hover {
+.case-study-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 40px rgba(79, 124, 130, 0.15);
 }
 
-/* Project Image */
-.project-image-wrapper {
+/* Case Study Image */
+.case-study-image-wrapper {
   position: relative;
   overflow: hidden;
   height: 240px;
 }
 
-.project-image {
+.case-study-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image {
+.case-study-card:hover .case-study-image {
   transform: scale(1.1);
 }
 
 /* Overlay */
-.project-overlay {
+.case-study-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -213,7 +220,7 @@ const closeModal = () => {
   transition: opacity 0.3s ease;
 }
 
-.project-card:hover .project-overlay {
+.case-study-card:hover .case-study-overlay {
   opacity: 1;
 }
 
@@ -256,22 +263,22 @@ const closeModal = () => {
   transform: translateY(-2px);
 }
 
-/* Project Content */
-.project-content {
+/* Case Study Content */
+.case-study-content {
   padding: 1.75rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.project-title {
+.case-study-title {
   font-size: 1.4rem;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 0.75rem;
 }
 
-.project-description {
+.case-study-description {
   font-size: 0.95rem;
   color: #666;
   line-height: 1.6;
@@ -281,7 +288,7 @@ const closeModal = () => {
 
 /* Tech Stack */
 .tech-stack {
-  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
 .tech-label {
@@ -316,6 +323,46 @@ const closeModal = () => {
   background: #4f7c82;
   color: #ffffff;
   transform: translateY(-2px);
+}
+
+/* Client Info */
+.case-study-client {
+  margin-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(79, 124, 130, 0.1);
+}
+
+.client-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.client-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4f7c82;
+}
+
+/* Results Info */
+.case-study-results {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(79, 124, 130, 0.1);
+}
+
+.results-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.results-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4f7c82;
 }
 
 /* Back Button */
@@ -359,7 +406,7 @@ const closeModal = () => {
     font-size: 1.1rem;
   }
 
-  .projects-grid-section {
+  .case-studies-grid-section {
     padding: 60px 0;
   }
 }
@@ -377,11 +424,11 @@ const closeModal = () => {
     font-size: 1rem;
   }
 
-  .projects-grid-section {
+  .case-studies-grid-section {
     padding: 40px 0;
   }
 
-  .project-image-wrapper {
+  .case-study-image-wrapper {
     height: 200px;
   }
 

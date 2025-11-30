@@ -14,24 +14,17 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import DefaultLayout from '../layouts/DefaultLayout.vue';
 import ProjectCard from '../components/ProjectCard.vue';
+import projectsData from '../data/projects.json';
 
-const projects = [
-  {
-    title: 'Portfolio Website',
-    description: 'My personal portfolio built with Vue 3 and Tailwind CSS.',
-    link: '#',
-  },
-  {
-    title: 'Chat Application',
-    description: 'Real-time chat app using Laravel + Vue + Socket.io.',
-    link: '#',
-  },
-  {
-    title: 'E-Commerce Store',
-    description: 'Modern online store built with Laravel and Vue.',
-    link: '#',
-  },
-];
+// Map projects from JSON to ProjectCard format
+const projects = computed(() => {
+  return projectsData.projects.map(project => ({
+    title: project.title,
+    description: project.description,
+    link: project.demo || project.code || '#'
+  }));
+});
 </script>

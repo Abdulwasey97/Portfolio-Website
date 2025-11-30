@@ -1,0 +1,137 @@
+{
+  "caseStudies": [
+    {
+      "id": 11,
+      "title": "Nesto",
+      "description": "We developed a digital mortgage platform for Nesto that streamlines the entire process with real-time rate comparisons, application tracking, and personalised guidance.",
+      "image": "/nesto.png",
+      "technologies": ["Laravel", "Next.js", "MySQL"],
+      "demo": "#",
+      "code": "#",
+      "featured": true,
+      "client": "Nesto",
+      "results": "Streamlined mortgage process, real-time rate comparisons"
+    },
+    {
+      "id": 1,
+      "title": "PostScrypt Phase 1",
+      "description": "PostScrypt is a secure digital platform that allows users to create, store, and manage their wills online.",
+      "image": "/postscrypt1.png",
+      "technologies": ["Laravel", "React", "MySQL"],
+      "demo": "#",
+      "code": "#",
+      "featured": true,
+      "client": "Fortune 500 Tech Company",
+      "results": "60% cost reduction, 99.9% uptime"
+    },
+    {
+      "id": 2,
+      "title": "PostScrypt Phase 2",
+      "description": "Our platform offers three smart ways to capture personal memories: AI-powered chats saved as a digital archive, online meetings where the bot attends and generates a booklet, and recorded or uploaded interviews that are automatically converted into a structured digital booklet.",
+      "image": "/postscrypt3.png",
+      "technologies": ["React", "Laravel", "MySQL", "Django","Stripe"],
+      "demo": "#",
+      "code": "#",
+      "featured": true,
+      "client": "Retail Giant",
+      "results": "45% conversion increase, 70% faster load times"
+    },
+    {
+      "id": 3,
+      "title": "Healthcare Mobile App Development",
+      "description": "Developed a HIPAA-compliant mobile application for patient management, improving appointment scheduling efficiency by 80% and patient satisfaction scores.",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+      "technologies": ["React Native", "Node.js", "PostgreSQL", "AWS"],
+      "demo": "#",
+      "code": "#",
+      "featured": false,
+      "client": "Regional Healthcare Network",
+      "results": "80% efficiency improvement, HIPAA compliant"
+    },
+    {
+      "id": 4,
+      "title": "Financial Services API Integration",
+      "description": "Built secure API integrations for multiple banking partners, enabling real-time transaction processing and reducing processing time by 50%.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "technologies": ["Python", "FastAPI", "PostgreSQL", "Redis"],
+      "demo": "#",
+      "code": "#",
+      "featured": false,
+      "client": "FinTech Startup",
+      "results": "50% faster processing, real-time transactions"
+    },
+    {
+      "id": 5,
+      "title": "Education Platform Modernization",
+      "description": "Modernized legacy education management system with improved user experience, supporting over 50,000 students and 2,000 faculty members.",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+      "technologies": ["Angular", "Spring Boot", "MySQL", "Docker"],
+      "demo": "#",
+      "code": "#",
+      "featured": false,
+      "client": "University System",
+      "results": "50K+ students supported, improved UX"
+    },
+    {
+      "id": 6,
+      "title": "IoT Smart Manufacturing Solution",
+      "description": "Implemented IoT sensors and data analytics platform for smart manufacturing, reducing downtime by 35% and increasing production efficiency.",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
+      "technologies": ["Python", "MQTT", "InfluxDB", "Grafana"],
+      "demo": "#",
+      "code": "#",
+      "featured": false,
+      "client": "Manufacturing Company",
+      "results": "35% downtime reduction, increased efficiency"
+    },
+    {
+      "id": 7,
+      "title": "Content Delivery Network Optimization",
+      "description": "Optimized CDN strategy for a media streaming service, reducing bandwidth costs by 40% while improving global content delivery speeds.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      "technologies": ["AWS CloudFront", "S3", "Lambda", "CloudWatch"],
+      "demo": "#",
+      "code": "#",
+      "featured": false,
+      "client": "Streaming Service",
+      "results": "40% cost reduction, faster global delivery"
+    },
+    {
+      "id": 8,
+      "title": "Real Estate Platform Development",
+      "description": "Built a comprehensive real estate platform with virtual property tours, automated valuation models, and CRM integration for 500+ agents.",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+      "technologies": ["React", "Node.js", "MongoDB", "Three.js"],
+      "demo": "#",
+      "code": "#",
+      "featured": false,
+      "client": "Real Estate Agency",
+      "results": "500+ agents onboarded, virtual tours enabled"
+    },
+    {
+      "id": 9,
+      "title": "Supply Chain Management System",
+      "description": "Developed an end-to-end supply chain management system with real-time tracking, automated inventory management, and predictive analytics.",
+      "image": "https://images.unsplash.com/photo-1590725140246-20acdee442be?w=800&h=600&fit=crop",
+      "technologies": ["Vue.js", "Laravel", "MySQL", "RabbitMQ"],
+      "demo": "#",
+      "code": "#",
+      "featured": false,
+      "client": "Logistics Company",
+      "results": "Real-time tracking, predictive analytics"
+    },
+    {
+      "id": 10,
+      "title": "Cybersecurity Enhancement Project",
+      "description": "Implemented comprehensive security measures including penetration testing, vulnerability assessments, and multi-factor authentication across platforms.",
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
+      "technologies": ["Security Audit", "OAuth 2.0", "SSL/TLS", "WAF"],
+      "demo": "#",
+      "code": "#",
+      "featured": false,
+      "client": "Financial Institution",
+      "results": "Zero security breaches, enhanced compliance"
+    }
+  ]
+}
+
