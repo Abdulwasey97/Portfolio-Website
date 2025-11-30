@@ -44,7 +44,7 @@ const techLogos = ref([
   },
   {
     name: '.Net Core',
-    src: 'https://img.icons8.com/color/1200/net-framework.jpg'
+    src: 'https://icon.icepanel.io/Technology/svg/.NET-core.svg'
   },
   {
     name: 'Vue.js',
@@ -57,6 +57,10 @@ const techLogos = ref([
   {
     name: 'Next.js',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
+  },
+  {
+    name: 'WordPress',
+    src: 'https://cdn-icons-png.flaticon.com/512/174/174881.png'
   },
   {
     name: 'MySQL',

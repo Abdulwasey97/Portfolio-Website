@@ -52,6 +52,7 @@
                   <a href="mailto:abdulwaseyjaved@yahoo.com" class="email-link">
                     abdulwaseyjaved@yahoo.com
                   </a>
+                  <br>
                   <a href="mailto:hassanofficial525@gmail.com" class="email-link">
                     hassanofficial525@gmail.com
                   </a>

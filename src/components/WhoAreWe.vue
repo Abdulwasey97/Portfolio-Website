@@ -1,40 +1,55 @@
 <template>
   <section id="who-we-are" class="who-are-we-section">
-    <div class="container">
-      <div class="row">
-        <!-- Left side - Title -->
-        <div class="col-lg-5 mb-4 mb-lg-0">
-          <p class="section-subtitle">WHO ARE WE?</p>
-          <h3 class="section-title">
-            Empowering businesses with AI automation, custom software, <br>and web solutions to boost innovation and
-            efficiency.<br>
-          </h3>
-        </div>
-
-        <!-- Right side - Description -->
-        <div class="col-lg-7">
-          <div class="description-content">
-            <p class="description-text">
-              At <strong>Prime Cloud Technologies</strong>, we are a forward-thinking technology firm committed to transforming businesses
-              with innovative digital solutions. Our team of skilled developers and designers specializes in crafting
-              custom software, web applications, and mobile apps that drive growth and operational efficiency. We
-              combine creativity with technical expertise to deliver excellence in every project, helping our clients
-              stay ahead in the digital era. From startups to established enterprises, we partner with businesses to
-              bring their vision to life.
-            </p>
-            <router-link 
-              to="/about-us" 
-              class="read-more-link"
-              :class="{ 'animating': isAnimating }"
-              @click="handleReadMoreClick"
-            >
-              <span class="read-more-text">Read more</span>
-              <span class="read-more-arrow-line" ref="arrowLineRef"></span>
-            </router-link>
-          </div>
-        </div>
+   <div class="container py-5">
+  <div class="row align-items-center">
+    
+    <!-- Left Side - Image -->
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="about-image-wrapper">
+        <img
+          src="https://images.stockcake.com/public/6/7/4/67491e9f-6ec3-4f45-be64-6580c63756d4_large/busy-office-space-stockcake.jpg"
+          alt="About Prime Cloud"
+          class="about-image"
+        />
       </div>
     </div>
+
+    <!-- Right Side - Content -->
+    <div class="col-lg-6">
+      <p class="section-subtitle">Get To Know Us</p>
+      <h2 class="section-title mb-3">WHO WE ARE</h2>
+
+      <p class="description-text">
+        At <strong>Prime Cloud Technologies</strong>, we are a forward-thinking
+        technology firm committed to transforming businesses with innovative
+        digital solutions. Our team specializes in AI automation, custom software,
+        and web solutions that help businesses grow, streamline operations, and
+        stay competitive in the digital era.
+      </p>
+      <div class="quote-box">
+  <span class="quote-line"></span>
+  <p class="quote-text">
+    Empowering businesses with AI automation, custom software,
+    and web solutions to boost innovation and efficiency.
+  </p>
+</div>
+
+
+     <router-link
+  to="/about-us"
+  class="read-more-btn"
+  :class="{ animating: isAnimating }"
+  @click="handleReadMoreClick"
+>
+  Read More
+  <span class="arrow">→</span>
+</router-link>
+
+    </div>
+
+  </div>
+</div>
+
   </section>
 </template>
 
@@ -249,4 +264,78 @@ const handleReadMoreClick = async (event) => {
     font-size: 0.9rem;
   }
 }
+
+.about-image-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-image{
+  width:90%;
+  height:auto;
+  border-radius:10px;
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  background-color: #214246;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #214246;
+  transform: translateY(-2px);
+}
+
+.read-more-btn .arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover .arrow {
+  transform: translateX(6px);
+}
+
+.quote-box {
+  position: relative;
+  padding-left: 30px;
+  margin-top: 25px;
+  margin-bottom:20px;
+}
+
+.quote-line {
+  position: absolute;
+  left: 0;
+  top: 5px;
+ 
+  width: 4px;
+  height: 100%;
+  background-color: #214246; /* brand color */
+  border-radius: 2px;
+}
+
+.quote-text {
+  font-size: 17px;
+  line-height: 1.8;
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+
 </style>

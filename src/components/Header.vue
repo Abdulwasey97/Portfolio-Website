@@ -5,7 +5,7 @@
   >
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <router-link class="navbar-brand fw-bold text-primary" to="/">Prime Cloud Technologies</router-link>
+        <router-link class="navbar-brand fw-bold text-primary" to="/">Prime Cloud Technologis</router-link>
         <button 
           class="navbar-toggler" 
           type="button" 
