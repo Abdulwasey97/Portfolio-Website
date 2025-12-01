@@ -8,7 +8,7 @@
       >
         <div class="project-modal">
           <button class="close-btn" @click="handleClose" aria-label="Close project details">
-            <i class="fas fa-times"></i>
+            <span class="close-icon">×</span>
           </button>
 
           <div class="modal-image-wrapper">
@@ -79,9 +79,9 @@ const handleClose = () => {
 
 .project-modal {
   background: #ffffff;
-  border-radius: 24px;
-  width: min(900px, 100%);
-  max-height: 90vh;
+  border-radius: 10px;
+  width: min(1100px, 100%);
+  max-height: 95vh;
   overflow: hidden;
   box-shadow: 0 25px 60px rgba(11, 31, 53, 0.25);
   position: relative;
@@ -97,8 +97,8 @@ const handleClose = () => {
   height: 42px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.9);
-  color: #4f7c82;
+  background: #4f7c82;
+  color: #ffffff;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
   display: flex;
@@ -107,27 +107,32 @@ const handleClose = () => {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
+.close-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
 .close-btn:hover {
   transform: rotate(90deg) scale(1.05);
-  background: #f4f6f8;
+  background: #3b6167;
 }
 
 .modal-image-wrapper {
   width: 100%;
-  height: 320px;
-  overflow: hidden;
+  height: 65vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
 
 .modal-content {
   padding: 2.5rem;
-  overflow-y: auto;
 }
 
 .modal-label {
@@ -196,11 +201,12 @@ const handleClose = () => {
 
 @media (max-width: 767px) {
   .project-modal {
-    border-radius: 18px;
+    border-radius: 10px;
+    max-height: 95vh;
   }
 
   .modal-image-wrapper {
-    height: 220px;
+    height: 55vh;
   }
 
   .modal-content {

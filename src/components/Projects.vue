@@ -4,7 +4,7 @@
       <!-- Section Header -->
       <div class="section-header text-center mb-5">
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">A showcase of my recent work and creative solutions</p>
+        <p class="section-subtitle">A showcase of recent work and creative solutions</p>
         <div class="title-underline"></div>
       </div>
 
@@ -25,16 +25,6 @@
                 class="project-image" 
                 :alt="project.title"
               />
-              <div class="project-overlay">
-                <div class="overlay-buttons">
-                  <a :href="project.demo" class="overlay-btn demo-btn" @click.stop>
-                    <i class="fas fa-external-link-alt"></i> Demo
-                  </a>
-                  <a :href="project.code" class="overlay-btn code-btn" @click.stop>
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                </div>
-              </div>
             </div>
             <div class="project-content">
               <h3 class="project-title">{{ project.title }}</h3>
@@ -161,66 +151,9 @@ const closeModal = () => {
   transition: transform 0.5s ease;
 }
 
+/* Subtle zoom on hover */
 .project-card:hover .project-image {
-  transform: scale(1.1);
-}
-
-/* Overlay */
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(79, 124, 130, 0.95), rgba(106, 156, 163, 0.95));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
-.overlay-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.overlay-btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.demo-btn {
-  background: #ffffff;
-  color: #4f7c82;
-}
-
-.demo-btn:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-}
-
-.code-btn {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-.code-btn:hover {
-  background: #ffffff;
-  color: #4f7c82;
-  transform: translateY(-2px);
+  transform: scale(1.03);
 }
 
 /* Project Content */
@@ -337,11 +270,6 @@ const closeModal = () => {
 
   .project-image-wrapper {
     height: 200px;
-  }
-
-  .overlay-buttons {
-    flex-direction: column;
-    gap: 0.75rem;
   }
 
   .see-more-btn {

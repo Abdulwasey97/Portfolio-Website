@@ -95,8 +95,23 @@ const formData = ref({
 })
 
 const submitForm = () => {
-  alert('Message sent successfully! We\'ll get back to you soon.')
-  console.log('Form data:', formData.value)
+  const to = 'abdulwasayjaved@gmail.com,hassanofficial525@gmail.com'
+  const subject = `New contact form message from ${formData.value.name || 'Portfolio Website'}`
+  const bodyLines = [
+    `Name: ${formData.value.name}`,
+    `Email: ${formData.value.email}`,
+    `Phone: ${formData.value.phone || 'N/A'}`,
+    '',
+    'Message:',
+    formData.value.message
+  ]
+
+  const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`
+
+  window.location.href = mailtoLink
+
+  alert('Opening your email client to send the message.')
+
   // Reset form
   formData.value = {
     name: '',

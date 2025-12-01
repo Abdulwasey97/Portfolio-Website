@@ -30,16 +30,6 @@
                   class="project-image" 
                   :alt="project.title"
                 />
-                <div class="project-overlay">
-                  <div class="overlay-buttons">
-                    <a :href="project.demo" class="overlay-btn demo-btn" @click.stop>
-                      <i class="fas fa-external-link-alt"></i> Demo
-                    </a>
-                    <a :href="project.code" class="overlay-btn code-btn" @click.stop>
-                      <i class="fab fa-github"></i> Code
-                    </a>
-                  </div>
-                </div>
               </div>
               <div class="project-content">
                 <h3 class="project-title">{{ project.title }}</h3>
@@ -61,11 +51,11 @@
           </div>
         </div>
 
-        <!-- Back to Home Button -->
+        <!-- Back to Home Text Link -->
         <div class="text-center mt-5">
-          <router-link to="/" class="back-btn">
-            <i class="fas fa-arrow-left"></i>
-            <span>Back to Home</span>
+          <router-link to="/" class="back-home-link">
+            <span class="back-home-text">Back to Home</span>
+            <span class="back-home-arrow-line"></span>
           </router-link>
         </div>
       </div>
@@ -195,65 +185,7 @@ const closeModal = () => {
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.1);
-}
-
-/* Overlay */
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(79, 124, 130, 0.95), rgba(106, 156, 163, 0.95));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
-.overlay-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.overlay-btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.demo-btn {
-  background: #ffffff;
-  color: #4f7c82;
-}
-
-.demo-btn:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-}
-
-.code-btn {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-.code-btn:hover {
-  background: #ffffff;
-  color: #4f7c82;
-  transform: translateY(-2px);
+  transform: scale(1.03);
 }
 
 /* Project Content */
@@ -318,35 +250,44 @@ const closeModal = () => {
   transform: translateY(-2px);
 }
 
-/* Back Button */
-.back-btn {
+/* Back Home Text Link (matches About page) */
+.back-home-link {
   display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2.5rem;
-  background: transparent;
-  color: #4f7c82;
+  flex-direction: column;
+  align-items: flex-start;
   text-decoration: none;
+  color: #4f7c82;
+  text-align: center;
+  gap: 0.15rem;
+}
+
+.back-home-text {
   font-weight: 600;
   font-size: 1.05rem;
-  border-radius: 50px;
-  border: 2px solid #4f7c82;
-  transition: all 0.3s ease;
 }
 
-.back-btn:hover {
-  background: linear-gradient(135deg, #4f7c82 0%, #6a9ca3 100%);
-  color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(79, 124, 130, 0.3);
+.back-home-arrow-line {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #4f7c82;
 }
 
-.back-btn i {
-  transition: transform 0.3s ease;
+.back-home-arrow-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.6em;
+  height: 0.6em;
+  border-top: 2px solid #4f7c82;
+  border-left: 2px solid #4f7c82;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
-.back-btn:hover i {
-  transform: translateX(-5px);
+.back-home-link:hover {
+  color: #2f555a;
 }
 
 /* Responsive Design */
@@ -383,16 +324,6 @@ const closeModal = () => {
 
   .project-image-wrapper {
     height: 200px;
-  }
-
-  .overlay-buttons {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .back-btn {
-    padding: 0.875rem 2rem;
-    font-size: 1rem;
   }
 }
 </style>

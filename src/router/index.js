@@ -3,6 +3,8 @@ import Home from '../views/Home.vue'
 import AboutUs from '../views/AboutUs.vue'
 import ProjectsPage from '../views/ProjectsPage.vue'
 import CaseStudiesPage from '../views/CaseStudiesPage.vue'
+import TermsAndConditions from '../views/TermsAndConditions.vue'
+import PrivacyPolicy from '../views/PrivacyPolicy.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +28,16 @@ const router = createRouter({
       path: '/case-studies',
       name: 'case-studies',
       component: CaseStudiesPage
+    },
+    {
+      path: '/terms-and-conditions',
+      name: 'terms-and-conditions',
+      component: TermsAndConditions
+    },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: PrivacyPolicy
     }
   ],
   scrollBehavior(to, from, savedPosition) {

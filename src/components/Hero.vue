@@ -15,10 +15,6 @@
       <div class="row align-items-center min-vh-100">
         <div class="col-lg-6 hero-content">
        
-          
-        
-          
-          
           <!-- Typing Animation Subtitle -->
           <div class="hero-subtitle mb-4">
             <span class="tech-stack">
@@ -420,7 +416,7 @@ onUnmounted(() => {
 .hero-subtitle {
   font-family: 'Courier New', monospace;
   color: #6a9ca3;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   animation: fadeInUp 1.2s ease-out 0.6s both;
   min-height: 50px;
 }
@@ -440,8 +436,8 @@ onUnmounted(() => {
 .typing-text {
   color: #4fd1c5;
   font-weight: 600;
-  min-width: 250px;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .cursor {
@@ -461,7 +457,7 @@ onUnmounted(() => {
 /* Description */
 .hero-description {
   color: #b8c5d6;
-  font-size: 1.15rem;
+  font-size: 1.55rem;
   line-height: 1.8;
   animation: fadeInUp 1.2s ease-out 0.9s both;
 }

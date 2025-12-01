@@ -25,16 +25,6 @@
                 class="case-study-image" 
                 :alt="caseStudy.title"
               />
-              <div class="case-study-overlay">
-                <div class="overlay-buttons">
-                  <a :href="caseStudy.demo" class="overlay-btn demo-btn" @click.stop>
-                    <i class="fas fa-external-link-alt"></i> View Case
-                  </a>
-                  <a :href="caseStudy.code" class="overlay-btn code-btn" @click.stop>
-                    <i class="fas fa-file-alt"></i> Details
-                  </a>
-                </div>
-              </div>
             </div>
             <div class="case-study-content">
               <h3 class="case-study-title">{{ caseStudy.title }}</h3>
@@ -163,65 +153,7 @@ const closeModal = () => {
 }
 
 .case-study-card:hover .case-study-image {
-  transform: scale(1.1);
-}
-
-/* Overlay */
-.case-study-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(79, 124, 130, 0.95), rgba(106, 156, 163, 0.95));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.case-study-card:hover .case-study-overlay {
-  opacity: 1;
-}
-
-.overlay-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.overlay-btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.demo-btn {
-  background: #ffffff;
-  color: #4f7c82;
-}
-
-.demo-btn:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-}
-
-.code-btn {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-.code-btn:hover {
-  background: #ffffff;
-  color: #4f7c82;
-  transform: translateY(-2px);
+  transform: scale(1.03);
 }
 
 /* Case Study Content */
@@ -358,11 +290,6 @@ const closeModal = () => {
 
   .case-study-image-wrapper {
     height: 200px;
-  }
-
-  .overlay-buttons {
-    flex-direction: column;
-    gap: 0.75rem;
   }
 
   .see-more-btn {

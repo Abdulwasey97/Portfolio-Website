@@ -15,10 +15,18 @@
               <h5 class="footer-heading mb-3">Quick Links</h5>
               <ul class="footer-links list-unstyled">
                 <li><router-link to="/">Home</router-link></li>
-                <li><a href="/#about">About</a></li>
-                <li><a href="/#skills">Skills</a></li>
-                <li><router-link to="/projects">Projects</router-link></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li>
+                  <a href="/#who-we-are" @click="navigateToSection($event, '#who-we-are')">About Us</a>
+                </li>
+                <li>
+                  <a href="/#projects" @click="navigateToSection($event, '#projects')">Projects</a>
+                </li>
+                <li>
+                  <a href="/#case-studies" @click="navigateToSection($event, '#case-studies')">Case Studies</a>
+                </li>
+                <li>
+                  <a href="/#contact" @click="navigateToSection($event, '#contact')">Contact</a>
+                </li>
               </ul>
             </div>
 
@@ -26,8 +34,12 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <h5 class="footer-heading mb-3">Legal</h5>
               <ul class="footer-links list-unstyled">
-                <li><a href="#terms">Terms & Conditions</a></li>
-                <li><a href="#privacy">Privacy Policy</a></li>
+                <li>
+                  <router-link to="/terms-and-conditions">Terms &amp; Conditions</router-link>
+                </li>
+                <li>
+                  <router-link to="/privacy-policy">Privacy Policy</router-link>
+                </li>
               </ul>
             </div>
 
@@ -65,8 +77,8 @@
           <div class="row">
             <div class="col-12 text-center py-3">
               <p class="copyright mb-0">
-                <span class="logo-emoji">☁️</span>
-                MyPortfolio © {{ currentYear }} - All Rights Reserved
+              
+              CodeWorld360 © {{ currentYear }} - All Rights Reserved
               </p>
             </div>
           </div>
@@ -78,11 +90,37 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import { PRIMARY_COLOR, SECONDARY_COLOR } from '@/config/colors'
 
 const currentYear = ref(new Date().getFullYear())
 const primaryColor = computed(() => PRIMARY_COLOR)
 const secondaryColor = computed(() => SECONDARY_COLOR)
+
+const router = useRouter()
+const route = useRoute()
+
+const navigateToSection = (event, sectionHash) => {
+  event.preventDefault()
+
+  // If we're not on the home page, navigate to home first
+  if (route.path !== '/') {
+    router.push('/').then(() => {
+      setTimeout(() => {
+        const element = document.querySelector(sectionHash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    })
+  } else {
+    // We're already on the home page, just scroll to the section
+    const element = document.querySelector(sectionHash)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+}
 
 const socialLinks = [
   { name: 'Instagram', url: 'https://www.instagram.com', icon: 'instagram' },

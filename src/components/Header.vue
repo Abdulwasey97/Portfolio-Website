@@ -26,7 +26,10 @@
               <a class="nav-link" href="/#who-we-are" @click="navigateToSection($event, '#who-we-are')">About Us</a>
             </li>        
             <li class="nav-item">
-              <a class="nav-link" href="/#projects" @click="navigateToSection($event, '#projects')">Our Projects</a>
+              <a class="nav-link" href="/#projects" @click="navigateToSection($event, '#projects')">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#case-studies" @click="navigateToSection($event, '#case-studies')">Case Studies</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/#contact" @click="navigateToSection($event, '#contact')">Contact Us</a>
@@ -40,7 +43,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
@@ -52,12 +55,29 @@ const handleScroll = () => {
   const scrollPosition = window.scrollY
   isScrolled.value = scrollPosition > 50
   
-  // Check if we're still over the hero section
-  // Hero section is min-vh-100, so we check against full viewport height
-  // Add a small buffer to ensure we switch colors only when truly past the hero
-  const heroHeight = window.innerHeight  - 40 // Full viewport minus small buffer
-  isOverHero.value = scrollPosition < heroHeight
+  // Only check hero position if we're on the home page
+  // On other pages, always use primary color
+  if (route.path === '/') {
+    // Check if we're still over the hero section
+    // Hero section is min-vh-100, so we check against full viewport height
+    // Add a small buffer to ensure we switch colors only when truly past the hero
+    const heroHeight = window.innerHeight - 40 // Full viewport minus small buffer
+    isOverHero.value = scrollPosition < heroHeight
+  } else {
+    // On other pages, always use primary color (not over hero)
+    isOverHero.value = false
+  }
 }
+
+// Watch for route changes to update header color immediately
+watch(() => route.path, () => {
+  if (route.path !== '/') {
+    isOverHero.value = false
+  } else {
+    // Recalculate when returning to home page
+    handleScroll()
+  }
+})
 
 const navigateToSection = (event, sectionHash) => {
   event.preventDefault()
@@ -85,6 +105,10 @@ const navigateToSection = (event, sectionHash) => {
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
   handleScroll() // Initial check
+  // Set initial state based on current route
+  if (route.path !== '/') {
+    isOverHero.value = false
+  }
 })
 
 onUnmounted(() => {

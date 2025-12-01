@@ -6,25 +6,24 @@
         <div class="col-lg-5 mb-4 mb-lg-0">
           <p class="section-subtitle">WHO ARE WE?</p>
           <h3 class="section-title">
-            From AI automation to custom software and web development,<br>
-             we empower businesses to accelerate innovation and improve operational efficiency.<br>
+            Empowering businesses with AI automation, custom software, <br>and web solutions to boost innovation and
+            efficiency.<br>
           </h3>
         </div>
-        
+
         <!-- Right side - Description -->
         <div class="col-lg-7">
           <div class="description-content">
             <p class="description-text">
-              We are a cutting-edge technology company dedicated to transforming businesses 
-              through innovative digital solutions. Our team of expert developers and designers 
-              specialize in creating custom software, web applications, and mobile apps that 
-              drive growth and efficiency. We believe in delivering <strong>excellence</strong> 
-              through every project, combining creativity with technical expertise to help our 
-              clients stay ahead in the digital age. From startups to enterprises, we partner 
-              with businesses to turn their vision into reality.
+              At <strong>CodeWorld360</strong>, we are a forward-thinking technology firm committed to transforming businesses
+              with innovative digital solutions. Our team of skilled developers and designers specializes in crafting
+              custom software, web applications, and mobile apps that drive growth and operational efficiency. We
+              combine creativity with technical expertise to deliver excellence in every project, helping our clients
+              stay ahead in the digital era. From startups to established enterprises, we partner with businesses to
+              bring their vision to life.
             </p>
             <router-link to="/about-us" class="btn-learn-more">
-              Learn More 
+              Learn More
               <span class="arrow">→</span>
             </router-link>
           </div>
@@ -119,11 +118,11 @@ import { PRIMARY_COLOR } from '../config/colors'
   .who-are-we-section {
     padding: 4rem 0;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
   }
-  
+
   .description-content {
     padding-left: 0;
     margin-top: 2rem;
@@ -134,20 +133,20 @@ import { PRIMARY_COLOR } from '../config/colors'
   .who-are-we-section {
     padding: 3rem 0;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .weather-icons {
     font-size: 2rem;
   }
-  
+
   .description-text {
     font-size: 0.95rem;
     text-align: left;
   }
-  
+
   .btn-learn-more {
     padding: 0.75rem 1.5rem;
     font-size: 0.95rem;
@@ -158,14 +157,13 @@ import { PRIMARY_COLOR } from '../config/colors'
   .section-title {
     font-size: 1.75rem;
   }
-  
+
   .weather-icons {
     font-size: 1.5rem;
   }
-  
+
   .description-text {
     font-size: 0.9rem;
   }
 }
 </style>
-
