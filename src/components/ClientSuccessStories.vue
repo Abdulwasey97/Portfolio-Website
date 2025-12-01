@@ -9,6 +9,7 @@
         <p class="section-subtitle">
           See how CodeWorld360's innovative solutions have empowered businesses to thrive
         </p>
+        <div class="title-underline"></div>
       </div>
 
       <!-- Carousel Container -->
@@ -135,6 +136,13 @@ const closeModal = () => {
 </script>
 
 <style scoped>
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4f7c82 0%, #6a9ca3 100%);
+  margin: 0 auto;
+  border-radius: 2px;
+}
 .success-stories-section {
   padding: 100px 0;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
