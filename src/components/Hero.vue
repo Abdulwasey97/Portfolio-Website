@@ -53,7 +53,7 @@
         </div>
         
         <!-- Right Side - 3D Visual Elements -->
-        <div class="col-lg-6 hero-visual-container">
+        <div class="col-lg-6 hero-visual-container d-none d-lg-block">
           <div class="visual-wrapper">
             <!-- Holographic Systems Canvas -->
             <div class="holo-canvas">
@@ -1278,6 +1278,16 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
+  /* Center hero content and buttons on tablets and small screens */
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
@@ -1411,6 +1421,15 @@ onUnmounted(() => {
 }
 
 @media (max-width: 576px) {
+  /* Vertically center hero content on small screens */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 140px); /* account for fixed header */
+    text-align: center;
+  }
+
   .hero-title {
     font-size: 1.75rem;
   }
@@ -1425,14 +1444,19 @@ onUnmounted(() => {
     padding: 0.85rem 1.5rem;
     font-size: 0.9rem;
   }
-  
+
+  /* Keep buttons in one row on small screens */
   .hero-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.75rem;
     width: 100%;
   }
-  
+
   .hero-buttons a {
-    width: 100%;
+    width: auto;
+    flex: 0 1 auto;
     justify-content: center;
   }
 }

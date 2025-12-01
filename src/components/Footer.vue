@@ -2,9 +2,9 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="container-fluid px-4">
-          <div class="row py-4">
+          <div class="row py-4 footer-links-row">
             <!-- Logo Section -->
-            <div class="col-lg-3 col-md-6 mb-4">
+            <div class="col-lg-3 col-md-6 mb-4 logo-column">
               <div class="logo-section">
                 <img src="/logo.png" alt="MyPortfolio Logo" class="footer-logo">
               </div>
@@ -266,6 +266,23 @@ const iconPaths = {
 @media (max-width: 767px) {
   .footer-heading {
     margin-top: 1.5rem;
+  }
+  
+  /* Hide logo column on mobile/small screens */
+  .logo-column {
+    display: none;
+  }
+
+  /* Make three columns per row on small/mobile screens (only top links row) */
+  .footer-content .footer-links-row > div {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  /* Center copyright text on mobile/small screens */
+  .footer-bottom .row,
+  .footer-bottom .copyright {
+    text-align: center;
   }
   
   .footer-logo {
