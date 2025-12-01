@@ -94,30 +94,43 @@ const formData = ref({
   message: ''
 })
 
-const submitForm = () => {
-  const to = 'abdulwasayjaved@gmail.com,hassanofficial525@gmail.com'
-  const subject = `New contact form message from ${formData.value.name || 'Portfolio Website'}`
-  const bodyLines = [
-    `Name: ${formData.value.name}`,
-    `Email: ${formData.value.email}`,
-    `Phone: ${formData.value.phone || 'N/A'}`,
-    '',
-    'Message:',
-    formData.value.message
-  ]
+const isSubmitting = ref(false)
 
-  const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`
+const submitForm = async () => {
+  isSubmitting.value = true
 
-  window.location.href = mailtoLink
+  try {
+    const response = await fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.value.name,
+        email: formData.value.email,
+        phone: formData.value.phone,
+        message: formData.value.message
+      })
+    })
 
-  alert('Opening your email client to send the message.')
+    if (!response.ok) {
+      throw new Error('Failed to submit form')
+    }
 
-  // Reset form
-  formData.value = {
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    alert('Your message has been saved. Thank you for reaching out!')
+
+    // Reset form
+    formData.value = {
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    }
+  } catch (error) {
+    console.error(error)
+    alert('Something went wrong while saving your message. Please try again later.')
+  } finally {
+    isSubmitting.value = false
   }
 }
 </script>

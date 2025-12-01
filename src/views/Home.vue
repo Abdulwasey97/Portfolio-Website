@@ -38,38 +38,38 @@ onBeforeUnmount(() => {
 })
 </script>
 
- <template>
-   <main class="flex-grow-1 main-content">
+<template>
+  <main class="flex-grow-1 main-content">
      <section class="section-wrapper">
-       <Hero />
+    <Hero />
      </section>
 
     <section class="section-wrapper scroll-animate from-right">
-      <TechBanner />
+    <TechBanner />
     </section>
 
     <section class="section-wrapper scroll-animate from-left">
-      <WhoAreWe />
+    <WhoAreWe />
     </section>
 
     <section class="section-wrapper scroll-animate from-right">
-      <ServicesSection />
+    <ServicesSection />
     </section>
 
     <section class="section-wrapper scroll-animate from-left">
-      <Projects />
+    <Projects />
     </section>
 
     <section class="section-wrapper scroll-animate from-right">
-      <CaseStudies />
+    <CaseStudies />
     </section>
 
     <section class="section-wrapper scroll-animate from-left">
-      <ClientSuccessStories />
+    <ClientSuccessStories />
     </section>
 
     <section class="section-wrapper scroll-animate from-right">
-      <Contact />
+    <Contact />
     </section>
   </main>
 </template>
