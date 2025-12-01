@@ -84,20 +84,19 @@ const navigateToSection = (event, sectionHash) => {
   
   // If we're not on the home page, navigate to home first
   if (route.path !== '/') {
-    router.push('/').then(() => {
-      // Wait for the navigation to complete, then scroll to the section
-      setTimeout(() => {
-        const element = document.querySelector(sectionHash)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
-      }, 100)
-    })
+    router.push({ path: '/', hash: sectionHash })
   } else {
     // We're already on the home page, just scroll to the section
     const element = document.querySelector(sectionHash)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const headerOffset = 80
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 }

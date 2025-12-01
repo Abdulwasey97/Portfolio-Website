@@ -24,56 +24,65 @@
           <!-- Right Column - Form Section -->
           <div class="col-lg-7">
             <div class="form-section">
-              <form @submit.prevent="submitForm">
+              <form @submit.prevent="submitForm" novalidate>
                 <div class="form-group">
                   <label for="name" class="form-label">Name</label>
                   <input 
                     type="text" 
-                    class="form-control" 
+                    class="form-control"
+                    :class="{ 'is-invalid': errors.name }"
                     id="name" 
                     v-model="formData.name"
                     placeholder="Enter your name"
-                    required
+                    @input="errors.name = ''"
                   />
+                  <div v-if="errors.name" class="error-message">{{ errors.name }}</div>
                 </div>
 
                 <div class="form-group">
                   <label for="email" class="form-label">Email</label>
                   <input 
                     type="email" 
-                    class="form-control" 
+                    class="form-control"
+                    :class="{ 'is-invalid': errors.email }"
                     id="email" 
                     v-model="formData.email"
                     placeholder="Enter your email"
-                    required
+                    @input="errors.email = ''"
                   />
+                  <div v-if="errors.email" class="error-message">{{ errors.email }}</div>
                 </div>
 
                 <div class="form-group">
                   <label for="phone" class="form-label">Phone</label>
                   <input 
                     type="tel" 
-                    class="form-control" 
+                    class="form-control"
+                    :class="{ 'is-invalid': errors.phone }"
                     id="phone" 
                     v-model="formData.phone"
                     placeholder="Enter your phone number"
+                    @input="errors.phone = ''"
                   />
+                  <div v-if="errors.phone" class="error-message">{{ errors.phone }}</div>
                 </div>
 
                 <div class="form-group">
                   <label for="message" class="form-label">How can we help?</label>
                   <textarea 
-                    class="form-control" 
+                    class="form-control"
+                    :class="{ 'is-invalid': errors.message }"
                     id="message" 
                     rows="5"
                     v-model="formData.message"
                     placeholder="Tell us about your project or question..."
-                    required
+                    @input="errors.message = ''"
                   ></textarea>
+                  <div v-if="errors.message" class="error-message">{{ errors.message }}</div>
                 </div>
 
-                <button type="submit" class="submit-btn">
-                  Send Message
+                <button type="submit" class="submit-btn" :disabled="isSubmitting">
+                  {{ isSubmitting ? 'Sending...' : 'Send Message' }}
                 </button>
               </form>
             </div>
@@ -81,11 +90,26 @@
         </div>
       </div>
     </div>
+
+    <!-- Success Modal Component -->
+    <SuccessModal
+      :show="showSuccessModal"
+      @close="showSuccessModal = false"
+    />
+
+    <!-- Error Modal Component -->
+    <ErrorModal
+      :show="showErrorModal"
+      :message="errorMessage || 'We could not save your message. Please try again later.'"
+      @close="showErrorModal = false"
+    />
   </section>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import SuccessModal from './SuccessModal.vue'
+import ErrorModal from './ErrorModal.vue'
 
 const formData = ref({
   name: '',
@@ -94,10 +118,49 @@ const formData = ref({
   message: ''
 })
 
+const errors = ref({})
 const isSubmitting = ref(false)
+const showSuccessModal = ref(false)
+const showErrorModal = ref(false)
+const errorMessage = ref('')
+
+const validateForm = () => {
+  const newErrors = {}
+  
+  if (!formData.value.name.trim()) {
+    newErrors.name = 'Name is required'
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!formData.value.email.trim()) {
+    newErrors.email = 'Email is required'
+  } else if (!emailRegex.test(formData.value.email)) {
+    newErrors.email = 'Please enter a valid email address'
+  }
+
+  if (formData.value.phone && formData.value.phone.trim()) {
+     // Basic phone validation: check if it has at least 7 digits
+     const phoneDigits = formData.value.phone.replace(/\D/g, '')
+     if (phoneDigits.length < 7) {
+        newErrors.phone = 'Please enter a valid phone number'
+     }
+  }
+
+  if (!formData.value.message.trim()) {
+    newErrors.message = 'Message is required'
+  }
+
+  errors.value = newErrors
+  return Object.keys(newErrors).length === 0
+}
 
 const submitForm = async () => {
+  if (!validateForm()) return
+
   isSubmitting.value = true
+  showSuccessModal.value = false
+  showErrorModal.value = false
+  errorMessage.value = ''
 
   try {
     const response = await fetch('http://localhost:5000/api/contact', {
@@ -114,10 +177,10 @@ const submitForm = async () => {
     })
 
     if (!response.ok) {
-      throw new Error('Failed to submit form')
+      throw new Error('Failed to submit form. Server responded with status ' + response.status)
     }
 
-    alert('Your message has been saved. Thank you for reaching out!')
+    showSuccessModal.value = true
 
     // Reset form
     formData.value = {
@@ -126,9 +189,19 @@ const submitForm = async () => {
       phone: '',
       message: ''
     }
+    errors.value = {}
   } catch (error) {
     console.error(error)
-    alert('Something went wrong while saving your message. Please try again later.')
+
+    // Handle network / connection errors (like ERR_CONNECTION_REFUSED)
+    if (error instanceof TypeError || (error?.message && error.message.includes('Failed to fetch'))) {
+      errorMessage.value =
+        'Cannot reach the server. Please make sure the backend (npm run server) is running and try again.'
+    } else {
+      errorMessage.value = error?.message || 'An unexpected error occurred while saving your message.'
+    }
+
+    showErrorModal.value = true
   } finally {
     isSubmitting.value = false
   }
@@ -283,6 +356,28 @@ textarea.form-control {
   transform: translateY(0);
 }
 
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control.is-invalid {
+  border-color: #e53e3e;
+  background-color: #fff5f5;
+}
+
+.form-control.is-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 991px) {
   .info-section,
@@ -340,4 +435,3 @@ textarea.form-control {
   }
 }
 </style>
-

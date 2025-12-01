@@ -50,10 +50,15 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     } else if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth'
-      }
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({
+            el: to.hash,
+            behavior: 'smooth',
+            top: 80
+          })
+        }, 500)
+      })
     } else {
       return { top: 0, behavior: 'smooth' }
     }

@@ -12,7 +12,6 @@ const PORT = process.env.PORT || 5000
 const CONTACT_FILE = path.join(__dirname, 'contact.json')
 
 app.use(express.json())
-console.log("hello world");
 // Simple CORS for local dev (Vite or any localhost origin)
 app.use((req, res, next) => {
   const origin = req.headers.origin || '*'

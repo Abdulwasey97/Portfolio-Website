@@ -78,6 +78,7 @@ onBeforeUnmount(() => {
 .main-content {
   margin-top: 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 .section-wrapper {
