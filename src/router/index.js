@@ -5,6 +5,7 @@ import ProjectsPage from '../views/ProjectsPage.vue'
 import CaseStudiesPage from '../views/CaseStudiesPage.vue'
 import TermsAndConditions from '../views/TermsAndConditions.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy.vue'
+import NotFound from '../views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: '/privacy-policy',
       name: 'privacy-policy',
       component: PrivacyPolicy
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: NotFound
     }
   ],
   scrollBehavior(to, from, savedPosition) {
