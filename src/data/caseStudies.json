@@ -5,7 +5,11 @@
       "title": "Nesto",
       "description": "We developed a digital mortgage platform for Nesto that streamlines the entire process with real-time rate comparisons, application tracking, and personalised guidance.",
       "image": "/nesto.png",
-      "technologies": ["Laravel", "Next.js", "MySQL"],
+      "technologies": [
+        "Laravel",
+        "Next.js",
+        "MySQL"
+      ],
       "demo": "#",
       "code": "#",
       "featured": true,
@@ -17,7 +21,11 @@
       "title": "PostScrypt Phase 1",
       "description": "PostScrypt is a secure digital platform that allows users to create, store, and manage their wills online.",
       "image": "/postscrypt1.png",
-      "technologies": ["Laravel", "React", "MySQL"],
+      "technologies": [
+        "Laravel",
+        "React",
+        "MySQL"
+      ],
       "demo": "#",
       "code": "#",
       "featured": true,
@@ -29,7 +37,13 @@
       "title": "PostScrypt Phase 2",
       "description": "Our platform offers three smart ways to capture personal memories: AI-powered chats saved as a digital archive, online meetings where the bot attends and generates a booklet, and recorded or uploaded interviews that are automatically converted into a structured digital booklet.",
       "image": "/postscrypt3.png",
-      "technologies": ["React", "Laravel", "MySQL", "Django","Stripe"],
+      "technologies": [
+        "React",
+        "Laravel",
+        "MySQL",
+        "Django",
+        "Stripe"
+      ],
       "demo": "#",
       "code": "#",
       "featured": true,
@@ -41,12 +55,70 @@
       "title": "Educity College Website",
       "description": "A responsive college website showcasing Educity’s programs, campus life, testimonials, and contact details, built using HTML5, CSS3, and React JS.",
       "image": "/educity.jpeg",
-      "technologies": ["HTML5", "CSS3", "React JS"],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "React JS"
+      ],
+      "demo": "#",
+      "code": "#",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "MapView Extension for Zoho Crm",
+      "description": "MapView gives you a bird’s-eye view of your CRM data by displaying Leads, Contacts, Accounts, Vendors, Deals, and Custom Modules on Google Maps. With bubble and heat maps, customizable address fields, and detailed field mapping, you can quickly analyze trends, view related info, and manage records by location—all in one unified map view.",
+      "image": "/Mapiew Screenshot.png",
+      "technologies": [
+        ".Net Framework",
+        ".Net Web API",
+        "React JS"
+      ],
+      "demo": "#",
+      "code": "#",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Leadfinder Extension for Zoho Crm",
+      "description": "LeadFinder is a Zoho CRM extension that discovers new leads using keyword, location, and radius-based search. Powered by Google Places, it provides real-time business data, extracts emails from websites, shows results on maps or list views, and lets users instantly import leads into any CRM module.",
+      "image": "/Leadfinder Screenshot.png",
+      "technologies": [
+        ".Net Framework",
+        ".Net Web API",
+        "React JS"
+      ],
+      "demo": "#",
+      "code": "#",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "LinkedPro Extension for Zoho Crm",
+      "description": "LinkedPro lets you import LinkedIn connections or target profiles directly into Zoho CRM. Use advanced search and filters to find people by name, job, company, domain, or location, view detailed profiles, export to CSV, and sync selected contacts into your CRM with ease.",
+      "image": "/Screenshot-LinkedPro.png",
+      "technologies": [
+        ".Net Framework",
+        ".Net Web API",
+        "React JS"
+      ],
+      "demo": "#",
+      "code": "#",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "InboxWidget",
+      "description": "InboxWidget unifies Gmail, Outlook, Zoho, and other accounts into one workspace. It streamlines email management with smart tags, filters, thread association, and team assignments, letting you send, receive, organize, and collaborate without switching tabs.",
+      "image": "/InboxWIdget Screenshot.png",
+      "technologies": [
+        ".Net Framework",
+        ".Net Web API",
+        "React JS"
+      ],
       "demo": "#",
       "code": "#",
       "featured": false
     }
-   
   ]
 }
-
