@@ -122,6 +122,32 @@ const handleClose = () => {
   height: 65vh;
   overflow-y: auto;
   overflow-x: hidden;
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #4f7c82 rgba(79, 124, 130, 0.1);
+}
+
+/* Webkit scrollbar (Chrome, Safari, Edge) */
+.modal-image-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-image-wrapper::-webkit-scrollbar-track {
+  background: rgba(79, 124, 130, 0.08);
+  border-radius: 10px;
+}
+
+.modal-image-wrapper::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4f7c82 0%, #3b6167 100%);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.modal-image-wrapper::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #3b6167 0%, #2d4a4f 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(79, 124, 130, 0.3);
 }
 
 .modal-image {

@@ -1,7 +1,7 @@
 <template>
   <section id="who-we-are" class="who-are-we-section">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row">
         <!-- Left side - Title -->
         <div class="col-lg-5 mb-4 mb-lg-0">
           <p class="section-subtitle">WHO ARE WE?</p>
@@ -22,9 +22,14 @@
               stay ahead in the digital era. From startups to established enterprises, we partner with businesses to
               bring their vision to life.
             </p>
-            <router-link to="/about-us" class="btn-learn-more">
-              Learn More
-              <span class="arrow">→</span>
+            <router-link 
+              to="/about-us" 
+              class="read-more-link"
+              :class="{ 'animating': isAnimating }"
+              @click="handleReadMoreClick"
+            >
+              <span class="read-more-text">Read more</span>
+              <span class="read-more-arrow-line" ref="arrowLineRef"></span>
             </router-link>
           </div>
         </div>
@@ -34,7 +39,48 @@
 </template>
 
 <script setup>
+import { ref, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
 import { PRIMARY_COLOR } from '../config/colors'
+
+const router = useRouter()
+const isAnimating = ref(false)
+const arrowLineRef = ref(null)
+
+const handleReadMoreClick = async (event) => {
+  if (isAnimating.value) return
+  
+  event.preventDefault()
+  isAnimating.value = true
+  
+  // Wait for DOM to update with animation class
+  await nextTick()
+  
+  // Get the arrow line element to listen for animation end
+  const arrowLine = event.currentTarget.querySelector('.read-more-arrow-line')
+  
+  if (arrowLine) {
+    // Listen for animation end event
+    const handleAnimationEnd = () => {
+      arrowLine.removeEventListener('animationend', handleAnimationEnd)
+      router.push('/about-us')
+      // Reset animation state after navigation
+      setTimeout(() => {
+        isAnimating.value = false
+      }, 100)
+    }
+    
+    arrowLine.addEventListener('animationend', handleAnimationEnd)
+  } else {
+    // Fallback: wait for animation duration (0.4s) then navigate
+    setTimeout(() => {
+      router.push('/about-us')
+      setTimeout(() => {
+        isAnimating.value = false
+      }, 100)
+    }, 200)
+  }
+}
 </script>
 
 <style scoped>
@@ -73,7 +119,7 @@ import { PRIMARY_COLOR } from '../config/colors'
   color: #666666;
   font-size: 1rem;
   line-height: 1.8;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   text-align: justify;
 }
 
@@ -82,35 +128,69 @@ import { PRIMARY_COLOR } from '../config/colors'
   font-weight: 700;
 }
 
-.btn-learn-more {
+.read-more-link {
   display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.575rem 2rem;
-  background: #4f7c82;
-  color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
+  color: #4f7c82;
+  gap: 0.15rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(79, 124, 130, 0.2);
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
 }
 
-.btn-learn-more:hover {
-  background: #3e6269;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 124, 130, 0.3);
-  color: #ffffff;
+.read-more-text {
+  font-weight: 600;
+  font-size: 1.05rem;
 }
 
-.btn-learn-more .arrow {
-  font-size: 1.25rem;
-  transition: transform 0.3s ease;
+.read-more-arrow-line {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #4f7c82;
+  transition: all 0.3s ease;
+  transform-origin: left center;
 }
 
-.btn-learn-more:hover .arrow {
-  transform: translateX(5px);
+.read-more-link.animating .read-more-arrow-line {
+  animation: stretchArrow 0.4s ease-out forwards;
+}
+
+@keyframes stretchArrow {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(3);
+  }
+}
+
+.read-more-arrow-line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0.6em;
+  height: 0.6em;
+  border-top: 2px solid #4f7c82;
+  border-right: 2px solid #4f7c82;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.read-more-link:hover {
+  color: #3e6269;
+}
+
+.read-more-link:hover .read-more-arrow-line {
+  background-color: #3e6269;
+}
+
+.read-more-link:hover .read-more-arrow-line::after {
+  border-color: #3e6269;
 }
 
 /* Responsive adjustments */
@@ -147,8 +227,11 @@ import { PRIMARY_COLOR } from '../config/colors'
     text-align: left;
   }
 
-  .btn-learn-more {
-    padding: 0.75rem 1.5rem;
+  .read-more-link {
+    font-size: 0.95rem;
+  }
+
+  .read-more-text {
     font-size: 0.95rem;
   }
 }

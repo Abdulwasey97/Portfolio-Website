@@ -291,6 +291,22 @@ const closeModal = () => {
   color: #2f555a;
 }
 
+/* Center single card in a row */
+/* For 3-column layout: if last card is alone (positions 1, 4, 7, etc.), center it */
+.row > .col-lg-4:last-child:nth-child(3n+1),
+.row > .col-lg-4:last-child:nth-child(3n+2) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* For 2-column layout: if last card is alone (positions 1, 3, 5, etc.), center it */
+@media (min-width: 768px) and (max-width: 991px) {
+  .row > .col-md-6:last-child:nth-child(2n+1) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 991px) {
   .hero-title {
