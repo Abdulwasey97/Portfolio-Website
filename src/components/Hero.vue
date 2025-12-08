@@ -6,7 +6,6 @@
         <div v-for="i in 50" :key="i" class="particle" :style="getParticleStyle(i)"></div>
       </div>
       <div class="gradient-orb orb-1"></div>
-      <div class="gradient-orb orb-2"></div>
       <div class="gradient-orb orb-3"></div>
       <div class="grid-overlay"></div>
     </div>
@@ -14,6 +13,12 @@
     <div class="container position-relative">
       <div class="row align-items-center min-vh-100">
         <div class="col-lg-6 hero-content">
+          <!-- Main Title -->
+          <h1 class="hero-title-main mb-4">
+            <span class="title-line-1">Complete</span>
+            <span class="title-line-2 gradient-text">360° Innovation</span>
+            <span class="title-line-3">Solutions</span>
+          </h1>
        
           <!-- Typing Animation Subtitle -->
           <div class="hero-subtitle mb-4">
@@ -25,10 +30,94 @@
             </span>
           </div>
           
-          <!-- Description -->
-          <p class="lead mb-5 hero-description">
-            360° innovation—design, develop, deploy, scale
-          </p>
+          <!-- Animated Workflow Pipeline: Design → Develop → Deploy → Scale -->
+          <div class="workflow-pipeline mb-5">
+            <div class="workflow-container">
+              <!-- Design Stage -->
+              <div class="workflow-stage" data-stage="design">
+                <div class="stage-node">
+                  <div class="node-icon design-node">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <div class="node-pulse"></div>
+                </div>
+                <div class="stage-label">
+                  <span class="stage-title">Design</span>
+                  <span class="stage-desc">Creative Vision</span>
+                </div>
+                <div class="stage-connector">
+                  <div class="connector-line"></div>
+                  <div class="connector-flow"></div>
+                </div>
+              </div>
+
+              <!-- Develop Stage -->
+              <div class="workflow-stage" data-stage="develop">
+                <div class="stage-node">
+                  <div class="node-icon develop-node">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </div>
+                  <div class="node-pulse"></div>
+                </div>
+                <div class="stage-label">
+                  <span class="stage-title">Develop</span>
+                  <span class="stage-desc">Build & Code</span>
+                </div>
+                <div class="stage-connector">
+                  <div class="connector-line"></div>
+                  <div class="connector-flow"></div>
+                </div>
+              </div>
+
+              <!-- Deploy Stage -->
+              <div class="workflow-stage" data-stage="deploy">
+                <div class="stage-node">
+                  <div class="node-icon deploy-node">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+                  <div class="node-pulse"></div>
+                </div>
+                <div class="stage-label">
+                  <span class="stage-title">Deploy</span>
+                  <span class="stage-desc">Launch Live</span>
+                </div>
+                <div class="stage-connector">
+                  <div class="connector-line"></div>
+                  <div class="connector-flow"></div>
+                </div>
+              </div>
+
+              <!-- Scale Stage -->
+              <div class="workflow-stage" data-stage="scale">
+                <div class="stage-node">
+                  <div class="node-icon scale-node">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                      <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                      <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+                  <div class="node-pulse"></div>
+                </div>
+                <div class="stage-label">
+                  <span class="stage-title">Scale</span>
+                  <span class="stage-desc">Grow & Optimize</span>
+                </div>
+              </div>
+            </div>
+          </div>
           
           <!-- CTA Buttons -->
           <div class="d-flex gap-3 flex-wrap hero-buttons mb-5">
@@ -57,12 +146,18 @@
           <div class="visual-wrapper">
             <!-- Holographic Systems Canvas -->
             <div class="holo-canvas">
-              <div class="holo-core">
-                <div class="core-glow"></div>
-                <div class="core-shell"></div>
-                <div class="core-pulse"></div>                
-                <div class="core-grid"></div>
-              </div>
+              <!-- 360 Innovation Circle Visual -->
+              <div class="innovation-circle-wrapper">
+                <div class="innovation-circle">
+                  <div class="circle-ring ring-1"></div>
+                  <div class="circle-ring ring-2"></div>
+                  <div class="circle-ring ring-3"></div>
+                  <div class="circle-center">
+                    <span class="innovation-number">360°</span>
+                    <span class="innovation-label">Innovation</span>
+                  </div>
+                </div>
+              </div>           
             </div>
           </div>
         </div>
@@ -78,11 +173,22 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const typedText = ref('');
 const techStack = [
+ 
+  'WordPress Development',
   'AI & Machine Learning',
   'Cloud Architecture',
   'Full-Stack Development',
   'DevOps & CI/CD',
+  'Custom Development',
+  'E-commerce Solutions',
+  'SEO & Digital Marketing',
+  'UI/UX Design',
+  'Database Management',
+  'API Integration',
+  'Performance Optimization',
+  'Security & Compliance',
   'Mobile Applications'
+  
 ];
 const orbitLabels = [
   'Cloud Mesh',
@@ -229,23 +335,15 @@ onUnmounted(() => {
   animation-delay: 0s;
 }
 
-.orb-2 {
-  width: 500px;
-  height: 500px;
-  background: linear-gradient(135deg, #3a6570 0%, #4f7c82 100%);
-  bottom: -15%;
-  left: -10%;
-  animation-delay: 7s;
-}
-
 .orb-3 {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   background: linear-gradient(135deg, #5a8c94 0%, #85b1b8 100%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation-delay: 14s;
+  opacity: 0.25;
 }
 
 @keyframes float {
@@ -265,6 +363,152 @@ onUnmounted(() => {
   animation: fadeInUp 1.2s ease-out;
   position: relative;
   z-index: 2;
+  padding-left: 2rem;
+}
+
+/* 360 Innovation Circle */
+.innovation-circle-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  animation: fadeInUp 1.2s ease-out 0.2s both;
+}
+
+.holo-canvas .innovation-circle-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  animation: fadeInUpCentered 1.2s ease-out 0.2s both;
+}
+
+.holo-canvas .innovation-circle {
+  pointer-events: auto;
+}
+
+.innovation-circle {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  opacity: 0.6;
+}
+
+.ring-1 {
+  width: 100%;
+  height: 100%;
+  border-color: rgba(79, 209, 197, 0.4);
+  animation: rotate360 20s linear infinite;
+  border-style: dashed;
+}
+
+.ring-2 {
+  width: 85%;
+  height: 85%;
+  border-color: rgba(133, 177, 184, 0.5);
+  animation: rotate360 15s linear infinite reverse;
+  border-style: solid;
+}
+
+.ring-3 {
+  width: 70%;
+  height: 70%;
+  border-color: rgba(79, 124, 130, 0.6);
+  animation: rotate360 10s linear infinite;
+  border-style: dotted;
+}
+
+.circle-center {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: radial-gradient(circle, rgba(79, 209, 197, 0.3), rgba(12, 34, 39, 0.9));
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(79, 209, 197, 0.5);
+  box-shadow: 0 0 60px rgba(79, 209, 197, 0.6);
+}
+
+.innovation-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4fd1c5 0%, #85b1b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.innovation-label {
+  font-size: 0.75rem;
+  color: #85b1b8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Main Hero Title */
+.hero-title-main {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1.2s ease-out 0.4s both;
+}
+
+.title-line-1 {
+  display: block;
+  color: #b8c5d6;
+  font-size: 0.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 0.3rem;
+}
+
+.title-line-2 {
+  display: block;
+  font-size: 1em;
+  margin: 0.2rem 0;
+}
+
+.title-line-3 {
+  display: block;
+  color: #85b1b8;
+  font-size: 0.45em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 0.3rem;
 }
 
 @keyframes fadeInUp {
@@ -275,6 +519,17 @@ onUnmounted(() => {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpCentered {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 40px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -462,6 +717,222 @@ onUnmounted(() => {
   animation: fadeInUp 1.2s ease-out 0.9s both;
 }
 
+/* Animated Workflow Pipeline: Design → Develop → Deploy → Scale */
+.workflow-pipeline {
+  margin-bottom: 2rem;
+  animation: fadeInUp 1.2s ease-out 0.7s both;
+}
+
+.workflow-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.workflow-stage {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.stage-node {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.node-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(79, 209, 197, 0.15), rgba(79, 124, 130, 0.1));
+  border: 2px solid rgba(79, 209, 197, 0.3);
+  border-radius: 50%;
+  color: #4fd1c5;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 20px rgba(79, 209, 197, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.node-icon svg {
+  filter: drop-shadow(0 0 6px rgba(79, 209, 197, 0.4));
+  transition: all 0.5s ease;
+}
+
+.node-pulse {
+  position: absolute;
+  inset: -8px;
+  border: 2px solid rgba(79, 209, 197, 0.4);
+  border-radius: 50%;
+  opacity: 0;
+  animation: nodePulse 2s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+.workflow-stage:hover .node-icon {
+  background: linear-gradient(135deg, rgba(79, 209, 197, 0.3), rgba(133, 177, 184, 0.2));
+  border-color: rgba(79, 209, 197, 0.6);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 30px rgba(79, 209, 197, 0.3),
+              0 0 20px rgba(79, 209, 197, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.workflow-stage:hover .node-icon svg {
+  filter: drop-shadow(0 0 12px rgba(79, 209, 197, 0.6));
+  transform: scale(1.1);
+}
+
+.workflow-stage:hover .node-pulse {
+  animation: nodePulseActive 1.5s ease-in-out infinite;
+}
+
+@keyframes nodePulseActive {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.3;
+  }
+}
+
+.stage-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.stage-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 0%, #b8c5d6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.4s ease;
+}
+
+.stage-desc {
+  font-size: 0.75rem;
+  color: rgba(79, 209, 197, 0.7);
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.workflow-stage:hover .stage-title {
+  background: linear-gradient(135deg, #4fd1c5 0%, #85b1b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: scale(1.05);
+}
+
+.workflow-stage:hover .stage-desc {
+  color: rgba(79, 209, 197, 1);
+  transform: translateY(-2px);
+}
+
+.stage-connector {
+  position: absolute;
+  top: 35px;
+  left: calc(50% + 35px);
+  width: calc(100% - 70px);
+  height: 2px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.connector-line {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(79, 209, 197, 0.2) 0%, 
+    rgba(79, 209, 197, 0.1) 50%, 
+    rgba(79, 209, 197, 0.2) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.connector-flow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(79, 209, 197, 0.6), 
+    transparent
+  );
+  animation: flowAnimation 3s ease-in-out infinite;
+}
+
+@keyframes flowAnimation {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.workflow-stage:last-child .stage-connector {
+  display: none;
+}
+
+/* Stage-specific colors */
+.design-node {
+  border-color: rgba(79, 209, 197, 0.3);
+}
+
+.develop-node {
+  border-color: rgba(79, 209, 197, 0.3);
+}
+
+.deploy-node {
+  border-color: rgba(79, 209, 197, 0.3);
+}
+
+.scale-node {
+  border-color: rgba(79, 209, 197, 0.3);
+}
+
 /* Modern Buttons */
 .hero-buttons {
   animation: fadeInUp 1.2s ease-out 1.2s both;
@@ -627,7 +1098,10 @@ onUnmounted(() => {
 }
 
 .holo-core {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 220px;
   height: 220px;
   border-radius: 50%;
@@ -635,6 +1109,7 @@ onUnmounted(() => {
   box-shadow: 0 0 80px rgba(79, 209, 197, 0.3),
     inset 0 0 40px rgba(79, 124, 130, 0.5);
   animation: corePulse 6s ease-in-out infinite;
+  z-index: 1;
 }
 
 .core-glow,
@@ -1150,6 +1625,70 @@ onUnmounted(() => {
 }
 
 @media (max-width: 991px) {
+  .hero-content {
+    padding-left: 1rem;
+  }
+
+  .hero-title-main {
+    font-size: 2.5rem;
+  }
+
+  .innovation-circle-wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .innovation-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-center {
+    width: 120px;
+    height: 120px;
+  }
+
+  .innovation-number {
+    font-size: 2rem;
+  }
+
+  .innovation-label {
+    font-size: 0.7rem;
+  }
+
+  .workflow-container {
+    gap: 0.5rem;
+  }
+
+  .workflow-stage {
+    min-width: 100px;
+  }
+
+  .stage-node {
+    width: 60px;
+    height: 60px;
+  }
+
+  .node-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .stage-title {
+    font-size: 0.9rem;
+  }
+
+  .stage-desc {
+    font-size: 0.7rem;
+  }
+
+  .stage-connector {
+    top: 30px;
+    left: calc(50% + 30px);
+    width: calc(100% - 60px);
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
@@ -1282,6 +1821,87 @@ onUnmounted(() => {
   .hero-content {
     text-align: center;
     align-items: center;
+    padding-left: 0;
+  }
+
+  .innovation-circle-wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .innovation-circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .circle-center {
+    width: 110px;
+    height: 110px;
+  }
+
+  .innovation-number {
+    font-size: 1.8rem;
+  }
+
+  .innovation-label {
+    font-size: 0.65rem;
+  }
+
+  .hero-title-main {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .title-line-1 {
+    font-size: 0.45em;
+  }
+
+  .title-line-3 {
+    font-size: 0.4em;
+  }
+
+  .workflow-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .workflow-stage {
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .stage-node {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+  }
+
+  .node-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .stage-label {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .stage-title {
+    font-size: 0.95rem;
+  }
+
+  .stage-desc {
+    font-size: 0.7rem;
+  }
+
+  .stage-connector {
+    display: none;
   }
 
   .hero-buttons {
@@ -1308,7 +1928,7 @@ onUnmounted(() => {
     font-size: 1.3rem;
   }
   
-  .orb-1, .orb-2, .orb-3 {
+  .orb-1, .orb-3 {
     width: 300px;
     height: 300px;
   }
@@ -1428,6 +2048,91 @@ onUnmounted(() => {
     justify-content: center;
     min-height: calc(100vh - 140px); /* account for fixed header */
     text-align: center;
+    padding-left: 0;
+  }
+
+  .innovation-circle-wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .innovation-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .circle-center {
+    width: 90px;
+    height: 90px;
+  }
+
+  .innovation-number {
+    font-size: 1.1rem;
+  }
+
+  .innovation-label {
+    font-size: 0.45rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-title-main {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .title-line-1 {
+    font-size: 0.4em;
+    letter-spacing: 2px;
+  }
+
+  .title-line-3 {
+    font-size: 0.35em;
+    letter-spacing: 2px;
+  }
+
+  .workflow-pipeline {
+    margin-bottom: 1.5rem;
+  }
+
+  .workflow-container {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .workflow-stage {
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .stage-node {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+
+  .node-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .stage-label {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .stage-title {
+    font-size: 0.85rem;
+  }
+
+  .stage-desc {
+    font-size: 0.65rem;
+  }
+
+  .stage-connector {
+    display: none;
   }
 
   .hero-title {
