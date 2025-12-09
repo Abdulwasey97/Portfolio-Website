@@ -2,7 +2,7 @@
   <section id="case-studies" class="case-studies-section">
     <div class="container">
       <!-- Section Header -->
-      <div class="section-header text-center mb-5">
+      <div class="section-header text-center mb-1">
         <h2 class="section-title">Featured Case Studies</h2>
         <p class="section-subtitle">Real-world solutions and successful client implementations</p>
         <div class="title-underline"></div>
@@ -149,6 +149,7 @@ const closeModal = () => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   transition: transform 0.5s ease;
 }
 

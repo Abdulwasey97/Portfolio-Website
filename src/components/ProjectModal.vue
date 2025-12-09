@@ -18,25 +18,6 @@
               :alt="project.title"
             />
           </div>
-
-          <div class="modal-content">
-            <p class="modal-label">Project Spotlight</p>
-            <h3 class="modal-title">{{ project.title }}</h3>
-            <p class="modal-description">{{ project.description }}</p>
-
-            <div class="modal-tech-stack" v-if="project.technologies?.length">
-              <span class="tech-label">Tech Stack</span>
-              <div class="tech-tags">
-                <span
-                  v-for="tech in project.technologies"
-                  :key="tech"
-                  class="tech-tag"
-                >
-                  {{ tech }}
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </transition>
@@ -68,25 +49,26 @@ const handleClose = () => {
 .project-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 13, 22, 0.75);
+  background: rgba(10, 13, 22, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2000;
-  padding: 1.5rem;
+  padding: 0;
   backdrop-filter: blur(4px);
 }
 
 .project-modal {
   background: #ffffff;
   border-radius: 10px;
-  width: min(1100px, 100%);
-  max-height: 95vh;
+  width: 80%;
+  max-height: 90vh;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(11, 31, 53, 0.25);
+  box-shadow: none;
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .close-btn {
@@ -119,9 +101,14 @@ const handleClose = () => {
 
 .modal-image-wrapper {
   width: 100%;
-  height: 65vh;
+  max-height: 90vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   overflow-y: auto;
   overflow-x: hidden;
+  padding: 2rem;
+  box-sizing: border-box;
   /* Firefox scrollbar */
   scrollbar-width: thin;
   scrollbar-color: #4f7c82 rgba(79, 124, 130, 0.1);
@@ -153,66 +140,9 @@ const handleClose = () => {
 .modal-image {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-}
-
-.modal-content {
-  padding: 2.5rem;
-}
-
-.modal-label {
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 3px;
-  color: #8aa4a9;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-}
-
-.modal-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-}
-
-.modal-description {
-  color: #4d4d4d;
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1.75rem;
-}
-
-.modal-tech-stack {
-  border-top: 1px solid rgba(79, 124, 130, 0.15);
-  padding-top: 1.5rem;
-}
-
-.tech-label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #4f7c82;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.75rem;
-  display: block;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tech-tag {
-  padding: 0.5rem 1rem;
-  background: rgba(79, 124, 130, 0.08);
-  color: #4f7c82;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border: 1px solid rgba(79, 124, 130, 0.15);
+  border: 2px solid rgba(79, 124, 130, 0.2);
 }
 
 .modal-fade-enter-active,
@@ -227,20 +157,23 @@ const handleClose = () => {
 
 @media (max-width: 767px) {
   .project-modal {
-    border-radius: 10px;
-    max-height: 95vh;
+    width: 80%;
   }
-
+  
   .modal-image-wrapper {
-    height: 55vh;
+    padding: 1rem;
+    max-height: 90vh;
   }
-
-  .modal-content {
-    padding: 1.5rem;
+  
+  .close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
   }
-
-  .modal-title {
-    font-size: 1.5rem;
+  
+  .close-icon {
+    font-size: 1.2rem;
   }
 }
 </style>
