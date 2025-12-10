@@ -5,7 +5,7 @@
       <div class="container">
         <div class="hero-content text-center">
           <h1 class="hero-title">About Us</h1>
-        
+
           <div class="title-underline"></div>
         </div>
       </div>
@@ -18,29 +18,30 @@
           <div class="col-lg-6 mb-4 mb-lg-0">
             <h2 class="section-heading">Our Mission</h2>
             <p class="section-text">
-              At WeatherWalay, we aspire to become Pakistan's go-to and most reliable Digital 
-              Weather service provider. We aim to provide our users with Accurate and Hyper Local 
-              weather information through implementing Automated Weather Stations (AWS).
+              At CodeWorld360, our mission is to transform the way people and businesses interact with
+              technology. We strive to make every process, service, and experience fully digital, seamless, and
+              efficient. By leveraging innovation, smart solutions, and cutting-edge technology, we aim to empower our
+              clients to achieve more, connect better, and operate smarter in an increasingly digital world.
             </p>
-            <p class="section-text">
-              Our ambition is to provide you with 100% accuracy in weather nowcasts and 95% accuracy 
-              in weather forecasts. We believe that accurate weather information is crucial for 
-              daily planning, agriculture, transportation, and emergency preparedness.
-            </p>
+           
           </div>
           <div class="col-lg-6">
-            <div class="info-box">
-              <div class="info-icon">🌤️</div>
-              <h3 class="info-title">Hyper Local Weather</h3>
-              <p class="info-text">
-                Get precise weather information for your exact location using our network of 
-                Automated Weather Stations across Pakistan.
-              </p>
+            <div class="mission-image-wrapper">
+              <img src="/vision.jpg" alt="Our Vision" class="mission-image" />
+              <div class="mission-overlay">
+                <div class="overlay-gradient"></div>
+                <div class="overlay-pattern"></div>
+                <div class="overlay-content">
+                  <div class="overlay-icon">✨</div>
+                  <h3 class="overlay-title">Our Mission</h3>
+                  <p class="overlay-text">Transforming Digital Experiences</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-       
+
 
         <!-- Leadership Section -->
         <section class="leadership-section">
@@ -48,7 +49,7 @@
             <h2 class="leadership-title">
               Our <span>Leadership</span>
             </h2>
-         
+
           </div>
 
           <div class="row justify-content-center g-4">
@@ -57,9 +58,7 @@
                 <div class="leader-image-wrapper">
                   <img
                     src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Leadership profile"
-                    class="leader-image"
-                  />
+                    alt="Leadership profile" class="leader-image" />
                 </div>
                 <div class="leader-card-body">
                   <h3 class="leader-name">Abullah Riaz</h3>
@@ -78,9 +77,7 @@
                 <div class="leader-image-wrapper">
                   <img
                     src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Leadership profile"
-                    class="leader-image"
-                  />
+                    alt="Leadership profile" class="leader-image" />
                 </div>
                 <div class="leader-card-body">
                   <h3 class="leader-name">Hassan Ali Shoaib</h3>
@@ -223,6 +220,132 @@ onMounted(() => {
   font-size: 1.05rem;
   line-height: 1.7;
   color: #666666;
+}
+
+.mission-image-wrapper {
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(79, 124, 130, 0.15);
+  border: 2px solid #e9ecef;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.mission-image-wrapper:hover {
+  border-color: #4f7c82;
+  box-shadow: 0 12px 32px rgba(79, 124, 130, 0.25);
+  transform: translateY(-5px);
+}
+
+.mission-image-wrapper:hover .mission-overlay {
+  opacity: 1;
+}
+
+.mission-image-wrapper:hover .overlay-gradient {
+  opacity: 0.85;
+}
+
+.mission-image-wrapper:hover .overlay-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mission-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mission-image-wrapper:hover .mission-image {
+  transform: scale(1.05);
+}
+
+.mission-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(79, 124, 130, 0.75) 0%,
+    rgba(106, 156, 163, 0.65) 50%,
+    rgba(79, 124, 130, 0.85) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 2rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.overlay-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.overlay-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.overlay-text {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.3px;
 }
 
 .stats-section {
@@ -469,6 +592,10 @@ onMounted(() => {
   .info-box {
     padding: 2rem;
   }
+
+  .mission-image-wrapper {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -504,6 +631,38 @@ onMounted(() => {
     font-size: 1.5rem;
   }
 
+  .mission-image-wrapper {
+    margin-top: 2rem;
+    min-height: 300px;
+  }
+
+  .mission-overlay {
+    opacity: 1;
+  }
+
+  .overlay-gradient {
+    opacity: 0.7;
+  }
+
+  .overlay-content {
+    padding: 1.5rem;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .overlay-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .overlay-title {
+    font-size: 1.5rem;
+  }
+
+  .overlay-text {
+    font-size: 0.95rem;
+  }
+
   .stats-section {
     padding: 3rem 1.5rem;
   }
@@ -536,4 +695,3 @@ onMounted(() => {
   }
 }
 </style>
-
