@@ -12,15 +12,16 @@
           data-bs-toggle="collapse" 
           data-bs-target="#navbarNav"
           aria-controls="navbarNav" 
-          aria-expanded="false" 
+          :aria-expanded="isMenuOpen" 
           aria-label="Toggle navigation"
+          @click="toggleMenu"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon" :class="{ 'close-icon': isMenuOpen }"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link" to="/">Home</router-link>
+              <router-link class="nav-link" to="/" @click="closeMenu">Home</router-link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/#who-we-are" @click="navigateToSection($event, '#who-we-are')">About Us</a>
@@ -50,6 +51,7 @@ const router = useRouter()
 const route = useRoute()
 const isScrolled = ref(false)
 const isOverHero = ref(true)
+const isMenuOpen = ref(false)
 
 const handleScroll = () => {
   const scrollPosition = window.scrollY
@@ -79,6 +81,32 @@ watch(() => route.path, () => {
   }
 })
 
+const closeMenu = () => {
+  const navbarCollapse = document.getElementById('navbarNav')
+  if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+    // Get the toggle button
+    const toggleButton = document.querySelector('[data-bs-target="#navbarNav"]')
+    
+    // Try Bootstrap API first
+    if (typeof window !== 'undefined' && window.bootstrap && window.bootstrap.Collapse) {
+      const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse)
+      if (bsCollapse) {
+        bsCollapse.hide()
+        return
+      }
+    }
+    
+    // Fallback: trigger click on toggle button (most reliable)
+    if (toggleButton) {
+      toggleButton.click()
+    } else {
+      // Last resort: manually hide
+      navbarCollapse.classList.remove('show')
+      isMenuOpen.value = false
+    }
+  }
+}
+
 const navigateToSection = (event, sectionHash) => {
   event.preventDefault()
   
@@ -99,6 +127,30 @@ const navigateToSection = (event, sectionHash) => {
       })
     }
   }
+  
+  // Close menu after navigation
+  closeMenu()
+}
+
+const toggleMenu = () => {
+  // Check menu state after a short delay to allow Bootstrap to update classes
+  setTimeout(() => {
+    checkMenuState()
+  }, 10)
+}
+
+const handleMenuToggle = (event) => {
+  // Listen to Bootstrap collapse events
+  if (event.target.id === 'navbarNav') {
+    isMenuOpen.value = event.type === 'shown.bs.collapse'
+  }
+}
+
+const checkMenuState = () => {
+  const navbarCollapse = document.getElementById('navbarNav')
+  if (navbarCollapse) {
+    isMenuOpen.value = navbarCollapse.classList.contains('show')
+  }
 }
 
 onMounted(() => {
@@ -108,10 +160,26 @@ onMounted(() => {
   if (route.path !== '/') {
     isOverHero.value = false
   }
+  
+  // Listen to Bootstrap collapse events for menu toggle
+  const navbarCollapse = document.getElementById('navbarNav')
+  if (navbarCollapse) {
+    navbarCollapse.addEventListener('shown.bs.collapse', handleMenuToggle)
+    navbarCollapse.addEventListener('hidden.bs.collapse', handleMenuToggle)
+    // Set initial state
+    checkMenuState()
+  }
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  
+  // Remove Bootstrap collapse event listeners
+  const navbarCollapse = document.getElementById('navbarNav')
+  if (navbarCollapse) {
+    navbarCollapse.removeEventListener('shown.bs.collapse', handleMenuToggle)
+    navbarCollapse.removeEventListener('hidden.bs.collapse', handleMenuToggle)
+  }
 })
 </script>
 
@@ -276,10 +344,23 @@ onUnmounted(() => {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%234f7c82' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  transition: all 0.3s ease;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .header-wrapper.over-hero .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Close icon (X) when menu is open */
+.navbar-toggler-icon.close-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%234f7c82' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6L24 24M6 24L24 6'/%3e%3c/svg%3e");
+  transform: rotate(0deg);
+}
+
+.header-wrapper.over-hero .navbar-toggler-icon.close-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6L24 24M6 24L24 6'/%3e%3c/svg%3e");
 }
 
 /* Adjust for mobile */
