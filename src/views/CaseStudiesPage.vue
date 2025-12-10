@@ -330,39 +330,15 @@ const closeModal = () => {
   color: #2f555a;
 }
 
-/* Center incomplete rows */
-/* For 3-column layout (lg): center 1 or 2 cards in last row */
-
-/* Single card in last row - center it */
-.row > .col-lg-4:last-child:nth-child(3n+1) {
+/* Center single card in a row */
+/* For 3-column layout: if last card is alone (positions 1, 4, 7, etc.), center it */
+.row > .col-lg-4:last-child:nth-child(3n+1),
+.row > .col-lg-4:last-child:nth-child(3n+2) {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Two cards in last row - center them as a group */
-/* When last 2 cards start at position 3n+1 (positions 1,2 or 4,5 or 7,8 etc.) */
-.row > .col-lg-4:nth-last-child(2):nth-child(3n+1) {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.row > .col-lg-4:nth-last-child(2):nth-child(3n+1) + .col-lg-4:nth-last-child(1) {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-/* When last 2 cards start at position 3n+2 (positions 2,3 or 5,6 or 8,9 etc.) */
-.row > .col-lg-4:nth-last-child(2):nth-child(3n+2) {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.row > .col-lg-4:nth-last-child(2):nth-child(3n+2) + .col-lg-4:nth-last-child(1) {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-/* For 2-column layout (md): center 1 card in last row */
+/* For 2-column layout: if last card is alone (positions 1, 3, 5, etc.), center it */
 @media (min-width: 768px) and (max-width: 991px) {
   .row > .col-md-6:last-child:nth-child(2n+1) {
     margin-left: auto;

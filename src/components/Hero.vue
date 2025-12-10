@@ -912,6 +912,18 @@ onUnmounted(() => {
   }
 }
 
+@keyframes flowAnimationVertical {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
 .workflow-stage:last-child .stage-connector {
   display: none;
 }
@@ -1573,6 +1585,59 @@ onUnmounted(() => {
 }
 
 /* Responsive Design */
+/* Extra Large Screens (1400px+) */
+@media (min-width: 1400px) {
+  .hero-content {
+    padding-left: 3rem;
+  }
+
+  .hero-title-main {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .bracket {
+    font-size: 2rem;
+  }
+
+  .workflow-stage {
+    min-width: 140px;
+  }
+
+  .stage-node {
+    width: 75px;
+    height: 75px;
+  }
+
+  .node-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btn-custom,
+  .btn-outline-custom {
+    padding: 1.1rem 2.25rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .hero-content {
+    padding-left: 2.5rem;
+  }
+
+  .hero-title-main {
+    font-size: 3.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 1199px) {
   .floating-card {
     width: 220px !important;
@@ -1624,29 +1689,102 @@ onUnmounted(() => {
   }
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .hero-content {
-    padding-left: 1rem;
+    padding-left: 1.5rem;
   }
 
   .hero-title-main {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
   }
 
-  .innovation-circle-wrapper {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .title-line-1 {
+    font-size: 0.48em;
+    letter-spacing: 3px;
+  }
+
+  .title-line-3 {
+    font-size: 0.42em;
+    letter-spacing: 2.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .bracket {
+    font-size: 1.6rem;
+  }
+
+  .typing-text {
+    font-size: 1.4rem;
+  }
+
+  .workflow-pipeline {
+    margin-bottom: 2rem;
+  }
+
+  .workflow-container {
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+  }
+
+  .workflow-stage {
+    min-width: auto;
+    flex: 1;
+    gap: 0.5rem;
+  }
+
+  .stage-node {
+    width: 55px;
+    height: 55px;
+  }
+
+  .node-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .stage-title {
+    font-size: 0.8rem;
+  }
+
+  .stage-desc {
+    font-size: 0.65rem;
+  }
+
+  .stage-connector {
+    top: 27.5px;
+    left: calc(50% + 27.5px);
+    width: calc(100% - 55px);
+  }
+
+  .hero-buttons {
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .btn-custom,
+  .btn-outline-custom {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-icon svg {
+    width: 18px;
+    height: 18px;
   }
 
   .innovation-circle {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
 
   .circle-center {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 
   .innovation-number {
@@ -1656,13 +1794,61 @@ onUnmounted(() => {
   .innovation-label {
     font-size: 0.7rem;
   }
+}
+
+@media (max-width: 991px) {
+  .hero-section .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-content {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero-title-main {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .title-line-1 {
+    font-size: 0.45em;
+    letter-spacing: 3px;
+  }
+
+  .title-line-3 {
+    font-size: 0.4em;
+    letter-spacing: 2.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .bracket {
+    font-size: 1.4rem;
+  }
+
+  .typing-text {
+    font-size: 1.2rem;
+    min-width: 200px;
+  }
+
+  .workflow-pipeline {
+    margin-bottom: 2rem;
+  }
 
   .workflow-container {
     gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .workflow-stage {
     min-width: 100px;
+    flex: 0 1 auto;
   }
 
   .stage-node {
@@ -1689,20 +1875,29 @@ onUnmounted(() => {
     width: calc(100% - 60px);
   }
 
+  .hero-buttons {
+    margin-bottom: 2rem;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .btn-custom,
+  .btn-outline-custom {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
   
   .hero-title .line-1 {
     font-size: 0.9rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .typing-text {
-    min-width: 200px;
   }
   
   .hero-description {
@@ -1715,6 +1910,30 @@ onUnmounted(() => {
   
   .stat-label {
     font-size: 0.8rem;
+  }
+
+  .innovation-circle-wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .innovation-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-center {
+    width: 120px;
+    height: 120px;
+  }
+
+  .innovation-number {
+    font-size: 2rem;
+  }
+
+  .innovation-label {
+    font-size: 0.7rem;
   }
   
   .hero-visual-container {
@@ -1818,6 +2037,11 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   /* Center hero content and buttons on tablets and small screens */
+  .hero-section .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .hero-content {
     text-align: center;
     align-items: center;
@@ -1863,23 +2087,27 @@ onUnmounted(() => {
 
   .workflow-container {
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 300px;
+    gap: 2rem;
+    max-width: 200px;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
   }
 
   .workflow-stage {
     min-width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    position: relative;
   }
 
   .stage-node {
     width: 55px;
     height: 55px;
     flex-shrink: 0;
+    position: relative;
   }
 
   .node-icon svg {
@@ -1888,24 +2116,72 @@ onUnmounted(() => {
   }
 
   .stage-label {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
   }
 
   .stage-title {
     font-size: 0.95rem;
+    margin-top: 0.5rem;
   }
 
   .stage-desc {
-    font-size: 0.7rem;
+    display: none;
   }
 
   .stage-connector {
-    display: none;
+    display: block;
+    position: absolute;
+    top: calc(55px + 1.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .connector-line {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+      rgba(79, 209, 197, 0.2) 0%, 
+      rgba(79, 209, 197, 0.1) 50%, 
+      rgba(79, 209, 197, 0.2) 100%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+
+  .connector-flow {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+      transparent, 
+      rgba(79, 209, 197, 0.6), 
+      transparent
+    );
+    animation: flowAnimationVertical 3s ease-in-out infinite;
   }
 
   .hero-buttons {
     justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-custom,
+  .btn-outline-custom {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-icon svg {
+    width: 16px;
+    height: 16px;
   }
 
   .hero-title {
@@ -1918,14 +2194,20 @@ onUnmounted(() => {
   
   .hero-subtitle {
     font-size: 1rem;
+    margin-bottom: 1.25rem;
   }
   
   .typing-text {
     min-width: 150px;
+    font-size: 1rem;
   }
   
   .bracket {
     font-size: 1.3rem;
+  }
+
+  .workflow-pipeline {
+    margin-bottom: 1.75rem;
   }
   
   .orb-1, .orb-3 {
@@ -2042,6 +2324,11 @@ onUnmounted(() => {
 
 @media (max-width: 576px) {
   /* Vertically center hero content on small screens */
+  .hero-section .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -2097,20 +2384,27 @@ onUnmounted(() => {
 
   .workflow-container {
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
   }
 
   .workflow-stage {
     min-width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 0.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    position: relative;
   }
 
   .stage-node {
     width: 50px;
     height: 50px;
     flex-shrink: 0;
+    position: relative;
   }
 
   .node-icon svg {
@@ -2119,24 +2413,73 @@ onUnmounted(() => {
   }
 
   .stage-label {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
   }
 
   .stage-title {
     font-size: 0.85rem;
+    margin-top: 0.5rem;
   }
 
   .stage-desc {
-    font-size: 0.65rem;
+    display: none;
   }
 
   .stage-connector {
-    display: none;
+    display: block;
+    position: absolute;
+    top: calc(50px + 1.25rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1.5rem;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .connector-line {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+      rgba(79, 209, 197, 0.2) 0%, 
+      rgba(79, 209, 197, 0.1) 50%, 
+      rgba(79, 209, 197, 0.2) 100%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+
+  .connector-flow {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+      transparent, 
+      rgba(79, 209, 197, 0.6), 
+      transparent
+    );
+    animation: flowAnimationVertical 3s ease-in-out infinite;
   }
 
   .hero-title {
     font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .bracket {
+    font-size: 1.1rem;
+  }
+
+  .typing-text {
+    font-size: 0.9rem;
+    min-width: 120px;
   }
   
   .greeting-badge {
@@ -2146,23 +2489,128 @@ onUnmounted(() => {
   
   .btn-custom,
   .btn-outline-custom {
-    padding: 0.85rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-icon svg {
+    width: 14px;
+    height: 14px;
   }
 
   /* Keep buttons in one row on small screens */
   .hero-buttons {
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
     width: 100%;
+    margin-bottom: 1.5rem;
   }
 
   .hero-buttons a {
     width: auto;
     flex: 0 1 auto;
     justify-content: center;
+    min-width: 140px;
+  }
+}
+
+/* Very Small Phones (< 400px) */
+@media (max-width: 400px) {
+  .hero-section .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .hero-title-main {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .title-line-1 {
+    font-size: 0.38em;
+    letter-spacing: 1.5px;
+  }
+
+  .title-line-3 {
+    font-size: 0.33em;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .bracket {
+    font-size: 1rem;
+  }
+
+  .typing-text {
+    font-size: 0.8rem;
+    min-width: 100px;
+  }
+
+  .workflow-container {
+    max-width: 160px;
+    gap: 1.25rem;
+  }
+
+  .stage-node {
+    width: 45px;
+    height: 45px;
+  }
+
+  .node-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .stage-title {
+    font-size: 0.75rem;
+  }
+
+  .stage-connector {
+    top: calc(45px + 1rem);
+    height: 1.25rem;
+  }
+
+  .btn-custom,
+  .btn-outline-custom {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .btn-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero-buttons {
+    gap: 0.5rem;
+  }
+
+  .hero-buttons a {
+    min-width: 120px;
+  }
+
+  .innovation-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle-center {
+    width: 80px;
+    height: 80px;
+  }
+
+  .innovation-number {
+    font-size: 1rem;
+  }
+
+  .innovation-label {
+    font-size: 0.4rem;
   }
 }
 </style>
