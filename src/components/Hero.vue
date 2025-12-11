@@ -364,6 +364,7 @@ onUnmounted(() => {
   position: relative;
   z-index: 2;
   padding-left: 2rem;
+  margin-top: 4rem;
 }
 
 /* 360 Innovation Circle */
