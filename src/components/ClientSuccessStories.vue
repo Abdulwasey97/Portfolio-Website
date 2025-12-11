@@ -14,10 +14,7 @@
 
       <!-- Carousel Container -->
       <div class="carousel-wrapper">
-        <Carousel 
-          v-bind="carouselSettings"
-          :breakpoints="breakpoints"
-        >
+        <Carousel v-bind="carouselSettings" :breakpoints="breakpoints">
           <Slide v-for="(testimonial, index) in testimonials" :key="index">
             <div class="carousel-slide">
               <div class="testimonial-card">
@@ -28,10 +25,11 @@
                   {{ testimonial.excerpt }}
                 </p>
                 <button class="read-more-btn" @click="openModal(testimonial)">Read More</button>
-                
+
                 <div class="client-info">
                   <div class="client-avatar">
-                    <img :src="testimonial.avatar" :alt="testimonial.name" />
+                    <img v-if="hasAvatar(testimonial.avatar)" :src="testimonial.avatar" :alt="testimonial.name" />
+                    <span v-else class="avatar-initial">{{ getFirstWord(testimonial.name) }}</span>
                   </div>
                   <div class="client-details">
                     <h4 class="client-name">{{ testimonial.name }}</h4>
@@ -55,11 +53,14 @@
             <button class="modal-close" @click="closeModal" aria-label="Close testimonial modal">
               <span>&times;</span>
             </button>
-            
+
             <div class="modal-content" v-if="selectedTestimonial">
               <div class="modal-header">
                 <div class="modal-avatar">
-                  <img :src="selectedTestimonial.avatar" :alt="selectedTestimonial.name" />
+                  <img v-if="hasAvatar(selectedTestimonial.avatar)" :src="selectedTestimonial.avatar"
+                    :alt="selectedTestimonial.name" />
+                  <span v-else class="avatar-initial modal-avatar-initial">{{ getFirstWord(selectedTestimonial.name)
+                  }}</span>
                 </div>
                 <div class="modal-client-info">
                   <h3 class="modal-client-name">{{ selectedTestimonial.name }}</h3>
@@ -133,6 +134,26 @@ const closeModal = () => {
   selectedTestimonial.value = null
   document.body.style.overflow = ''
 }
+
+// Helper function to check if avatar exists
+const hasAvatar = (avatar) => {
+  return avatar && avatar !== 'NULL' && avatar.trim() !== ''
+}
+
+// Helper function to get initials from name (first letter of each word)
+const getFirstWord = (name) => {
+  if (!name) return ''
+  const words = name.trim().split(/\s+/).filter(word => word.length > 0)
+  if (words.length === 0) return ''
+
+  // If single word, return first letter
+  if (words.length === 1) {
+    return words[0].charAt(0).toUpperCase()
+  }
+
+  // If multiple words, return first letter of first two words (max 2 letters)
+  return (words[0].charAt(0) + words[words.length - 1].charAt(0)).toUpperCase()
+}
 </script>
 
 <style scoped>
@@ -143,6 +164,7 @@ const closeModal = () => {
   margin: 0 auto;
   border-radius: 2px;
 }
+
 .success-stories-section {
   padding: 100px 0;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
@@ -242,7 +264,7 @@ const closeModal = () => {
 .testimonial-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 35px;
+  padding: 25px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
   height: 100%;
@@ -262,7 +284,7 @@ const closeModal = () => {
 .stars {
   display: flex;
   gap: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .stars i {
@@ -274,9 +296,9 @@ const closeModal = () => {
 .testimonial-text {
   font-size: 0.95rem;
   color: #4a5568;
-  line-height: 1.7;
-  margin-bottom: 15px;
-  flex-grow: 1;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  flex-grow: 0;
 }
 
 /* Read More Button */
@@ -288,7 +310,7 @@ const closeModal = () => {
   font-weight: 600;
   cursor: pointer;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   text-align: left;
   transition: color 0.3s ease;
   position: relative;
@@ -319,8 +341,9 @@ const closeModal = () => {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding-top: 25px;
+  padding-top: 18px;
   border-top: 1px solid #e2e8f0;
+  margin-top: auto;
 }
 
 .client-avatar {
@@ -332,6 +355,21 @@ const closeModal = () => {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid #4f7c82;
+  box-shadow: 0 4px 12px rgba(79, 124, 130, 0.2);
+}
+
+.client-avatar .avatar-initial {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f7c82 0%, #6a9ca3 100%);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
   border: 3px solid #4f7c82;
   box-shadow: 0 4px 12px rgba(79, 124, 130, 0.2);
 }
@@ -440,6 +478,21 @@ const closeModal = () => {
   box-shadow: 0 6px 20px rgba(79, 124, 130, 0.3);
 }
 
+.modal-avatar .modal-avatar-initial {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f7c82 0%, #6a9ca3 100%);
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 4px solid #4f7c82;
+  box-shadow: 0 6px 20px rgba(79, 124, 130, 0.3);
+}
+
 .modal-client-info {
   flex-grow: 1;
 }
@@ -507,7 +560,7 @@ const closeModal = () => {
   .carousel-wrapper {
     padding: 0 15px;
   }
-  
+
   .carousel-wrapper :deep(.carousel__slide) {
     padding: 0 10px;
   }
@@ -517,7 +570,7 @@ const closeModal = () => {
   .carousel-wrapper {
     padding: 0 10px;
   }
-  
+
   .carousel-wrapper :deep(.carousel__slide) {
     padding: 0 10px;
   }
@@ -531,16 +584,21 @@ const closeModal = () => {
   }
 
   .testimonial-card {
-    padding: 30px;
+    padding: 22px;
   }
 
   .modal-content {
     padding: 40px 30px;
   }
 
-  .modal-avatar img {
+  .modal-avatar img,
+  .modal-avatar .modal-avatar-initial {
     width: 70px;
     height: 70px;
+  }
+
+  .modal-avatar .modal-avatar-initial {
+    font-size: 1.75rem;
   }
 
   .modal-client-name {
@@ -552,7 +610,7 @@ const closeModal = () => {
   .carousel-wrapper {
     padding: 0 10px;
   }
-  
+
   .carousel-wrapper :deep(.carousel__slide) {
     padding: 0 5px;
   }
@@ -574,12 +632,17 @@ const closeModal = () => {
   }
 
   .testimonial-card {
-    padding: 25px;
+    padding: 20px;
   }
 
-  .client-avatar img {
+  .client-avatar img,
+  .client-avatar .avatar-initial {
     width: 50px;
     height: 50px;
+  }
+
+  .client-avatar .avatar-initial {
+    font-size: 1.2rem;
   }
 
   .client-name {
@@ -606,9 +669,14 @@ const closeModal = () => {
     text-align: center;
   }
 
-  .modal-avatar img {
+  .modal-avatar img,
+  .modal-avatar .modal-avatar-initial {
     width: 60px;
     height: 60px;
+  }
+
+  .modal-avatar .modal-avatar-initial {
+    font-size: 1.5rem;
   }
 
   .modal-client-name {
@@ -646,5 +714,3 @@ const closeModal = () => {
   }
 }
 </style>
-
-

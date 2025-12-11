@@ -19,12 +19,13 @@
             <h2 class="section-heading">Our Mission</h2>
             <p class="section-text">
               At CodeWorld360, our mission is to transform the way people and businesses interact with technology. We
-              strive to make every process, service, and experience fully digital, seamless, and efficient. 
-            </p>  <p class="section-text">
+              strive to make every process, service, and experience fully digital, seamless, and efficient.
+            </p>
+            <p class="section-text">
               We are committed to building intelligent digital ecosystems that simplify complex workflows, enhance user
               experiences, and accelerate business growth. Our focus is not just on delivering solutions, but on
               crafting future-ready platforms that adapt, scale, and evolve with our clients’ needs.
-              </p>
+            </p>
 
           </div>
           <div class="col-lg-6">
@@ -77,17 +78,19 @@
             <div class="col-lg-5 col-md-6">
               <div class="leader-card">
                 <div class="leader-image-wrapper">
-                  <img
-                    src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Leadership profile" class="leader-image" />
+                  <img src="/Hassan.jpeg" alt="Leadership profile" class="leader-image" />
                 </div>
                 <div class="leader-card-body">
                   <h3 class="leader-name">Hassan Ali Shoaib</h3>
                   <p class="leader-role">Co‑Founder / CTO</p>
                   <p class="leader-text">
-                    Usama leads the technology vision at WeatherWalay, building scalable platforms,
-                    real‑time data pipelines, and intuitive user experiences that turn complex
-                    meteorological data into everyday decisions.
+                    With a proven track record of leading high-performing teams, we bring a strategic, solution-driven
+                    approach to every project we manage. We focus on creating clarity, aligning teams around shared
+                    goals, and ensuring every member has the guidance and support they need to deliver their best work.
+                    Our leadership style is built on communication, accountability, and continuous improvement—driving
+                    projects forward with efficiency while fostering a positive, collaborative environment. We believe
+                    in empowering people, making informed decisions, and turning challenges into opportunities for
+                    growth and innovation.
                   </p>
                 </div>
               </div>
