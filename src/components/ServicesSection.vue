@@ -20,7 +20,7 @@
                 <div class="icon-wrapper">
                   <div v-html="service.icon"></div>
                 </div>
-                <h3 class="service-title" v-html="service.title"></h3>
+                <h3 class="service-title" v-html="service.title.replace(/<br\s*\/?>/gi, ' ')"></h3>
                 <p class="service-description">
                   {{ service.description }}
                 </p>
@@ -183,7 +183,7 @@ const breakpoints = {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 2rem auto;
+  margin: 0 0 2rem 0;
   transition: all 0.3s ease;
 }
 
@@ -202,12 +202,13 @@ const breakpoints = {
 }
 
 .service-title {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #4a4a4a;
   margin-bottom: 1.5rem;
   text-align: left;
   line-height: 1.4;
+  white-space: nowrap;
 }
 
 .service-description {
@@ -258,6 +259,7 @@ const breakpoints = {
     width: 80px;
     height: 80px;
     margin-bottom: 1.75rem;
+    margin-left: 0;
   }
 
   .icon-wrapper svg {
@@ -266,8 +268,9 @@ const breakpoints = {
   }
 
   .service-title {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 1.25rem;
+    white-space: nowrap;
   }
 
   .service-description {
@@ -314,6 +317,7 @@ const breakpoints = {
     width: 75px;
     height: 75px;
     margin-bottom: 1.5rem;
+    margin-left: 0;
   }
 
   .icon-wrapper svg {
@@ -322,8 +326,9 @@ const breakpoints = {
   }
 
   .service-title {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     margin-bottom: 1.25rem;
+    white-space: nowrap;
   }
 
   .service-description {
@@ -364,6 +369,7 @@ const breakpoints = {
     width: 70px;
     height: 70px;
     margin-bottom: 1.25rem;
+    margin-left: 0;
   }
 
   .icon-wrapper svg {
@@ -372,8 +378,9 @@ const breakpoints = {
   }
 
   .service-title {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
+    white-space: nowrap;
   }
 
   .service-description {

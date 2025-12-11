@@ -18,12 +18,14 @@
           <div class="col-lg-6 mb-4 mb-lg-0">
             <h2 class="section-heading">Our Mission</h2>
             <p class="section-text">
-              At CodeWorld360, our mission is to transform the way people and businesses interact with
-              technology. We strive to make every process, service, and experience fully digital, seamless, and
-              efficient. By leveraging innovation, smart solutions, and cutting-edge technology, we aim to empower our
-              clients to achieve more, connect better, and operate smarter in an increasingly digital world.
-            </p>
-           
+              At CodeWorld360, our mission is to transform the way people and businesses interact with technology. We
+              strive to make every process, service, and experience fully digital, seamless, and efficient. 
+            </p>  <p class="section-text">
+              We are committed to building intelligent digital ecosystems that simplify complex workflows, enhance user
+              experiences, and accelerate business growth. Our focus is not just on delivering solutions, but on
+              crafting future-ready platforms that adapt, scale, and evolve with our clients’ needs.
+              </p>
+
           </div>
           <div class="col-lg-6">
             <div class="mission-image-wrapper">
@@ -32,7 +34,7 @@
                 <div class="overlay-gradient"></div>
                 <div class="overlay-pattern"></div>
                 <div class="overlay-content">
-                  <div class="overlay-icon">✨</div>
+
                   <h3 class="overlay-title">Our Mission</h3>
                   <p class="overlay-text">Transforming Digital Experiences</p>
                 </div>
@@ -284,12 +286,10 @@ onMounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(79, 124, 130, 0.75) 0%,
-    rgba(106, 156, 163, 0.65) 50%,
-    rgba(79, 124, 130, 0.85) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(79, 124, 130, 0.75) 0%,
+      rgba(106, 156, 163, 0.65) 50%,
+      rgba(79, 124, 130, 0.85) 100%);
   opacity: 0;
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -323,9 +323,12 @@ onMounted(() => {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
