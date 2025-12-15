@@ -67,9 +67,12 @@
                   <h3 class="leader-name">Abullah Riaz</h3>
                   <p class="leader-role">Co‑Founder / CEO</p>
                   <p class="leader-text">
-                    Umair brings extensive experience in research, automation, and applied data science.
-                    He is dedicated to making hyper local and highly accurate weather information accessible
-                    for individuals, businesses, and public services across Pakistan.
+                    As a startup founder, this professional drives product vision and execution, leading the
+                    development, deployment, and scaling of digital platforms. They align business goals with technical
+                    strategy, build high-performing teams, and establish efficient processes for rapid, high-quality
+                    delivery. With hands-on expertise in system design and scalability, they turn ideas into reliable,
+                    growth-ready products while fostering a culture of ownership, innovation, and continuous
+                    improvement.
                   </p>
                 </div>
               </div>
@@ -88,9 +91,7 @@
                     approach to every project we manage. We focus on creating clarity, aligning teams around shared
                     goals, and ensuring every member has the guidance and support they need to deliver their best work.
                     Our leadership style is built on communication, accountability, and continuous improvement—driving
-                    projects forward with efficiency while fostering a positive, collaborative environment. We believe
-                    in empowering people, making informed decisions, and turning challenges into opportunities for
-                    growth and innovation.
+                    projects forward with efficiency while fostering a positive, collaborative environment.
                   </p>
                 </div>
               </div>
@@ -392,6 +393,8 @@ onMounted(() => {
 .leader-card {
   background: #f8fbfc;
   border-radius: 24px;
+  height: 100%;
+
   padding: 3.5rem 2.5rem 2.5rem;
   position: relative;
   box-shadow: 0 18px 45px rgba(79, 124, 130, 0.12);
