@@ -59,13 +59,11 @@
             <div class="col-lg-5 col-md-6">
               <div class="leader-card">
                 <div class="leader-image-wrapper">
-                  <img
-                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="Leadership profile" class="leader-image" />
+                  <img src="/Wasey.JPG" alt="Leadership profile" class="leader-image" />
                 </div>
                 <div class="leader-card-body">
-                  <h3 class="leader-name">Abullah Riaz</h3>
-                  <p class="leader-role">Co‑Founder / CEO</p>
+                  <h3 class="leader-name">Abdul Wasey</h3>
+                  <p class="leader-role">Co‑Founder</p>
                   <p class="leader-text">
                     As a startup founder, this professional drives product vision and execution, leading the
                     development, deployment, and scaling of digital platforms. They align business goals with technical
@@ -85,7 +83,7 @@
                 </div>
                 <div class="leader-card-body">
                   <h3 class="leader-name">Hassan Ali Shoaib</h3>
-                  <p class="leader-role">Co‑Founder / CTO</p>
+                  <p class="leader-role">Co‑Founder</p>
                   <p class="leader-text">
                     With a proven track record of leading high-performing teams, we bring a strategic, solution-driven
                     approach to every project we manage. We focus on creating clarity, aligning teams around shared
