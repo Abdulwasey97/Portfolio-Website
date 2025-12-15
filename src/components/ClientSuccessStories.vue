@@ -264,7 +264,7 @@ const getFirstWord = (name) => {
 .testimonial-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 25px;
+  padding: 18px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
   height: 100%;
@@ -294,11 +294,20 @@ const getFirstWord = (name) => {
 
 /* Testimonial Text */
 .testimonial-text {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #4a5568;
-  line-height: 1.6;
-  margin-bottom: 12px;
-  flex-grow: 0;
+  line-height: 1.5;
+
+  /* 👇 exactly 2 lines height */
+  min-height: calc(1.5em * 5);
+  max-height: calc(1.5em * 5);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
+  line-clamp: 1; /* standard */
+  overflow: hidden;
 }
 
 /* Read More Button */
