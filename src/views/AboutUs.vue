@@ -59,7 +59,7 @@
             <div class="col-lg-5 col-md-6">
               <div class="leader-card">
                 <div class="leader-image-wrapper">
-                  <img src="/Wasey.JPG" alt="Leadership profile" class="leader-image" />
+                  <img src="/Wasey2.png" alt="Leadership profile" class="leader-image" />
                 </div>
                 <div class="leader-card-body">
                   <h3 class="leader-name">Abdul Wasey</h3>
