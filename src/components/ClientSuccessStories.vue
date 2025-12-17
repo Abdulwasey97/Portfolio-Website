@@ -7,7 +7,7 @@
           Client <span class="highlight">Success Stories</span>
         </h2>
         <p class="section-subtitle">
-          See how CodeWorld360's innovative solutions have empowered businesses to thrive
+          See how Prime Cloud Technologies's innovative solutions have empowered businesses to thrive
         </p>
         <div class="title-underline"></div>
       </div>

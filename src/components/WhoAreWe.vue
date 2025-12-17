@@ -15,7 +15,7 @@
         <div class="col-lg-7">
           <div class="description-content">
             <p class="description-text">
-              At <strong>CodeWorld360</strong>, we are a forward-thinking technology firm committed to transforming businesses
+              At <strong>Prime Cloud Technologies</strong>, we are a forward-thinking technology firm committed to transforming businesses
               with innovative digital solutions. Our team of skilled developers and designers specializes in crafting
               custom software, web applications, and mobile apps that drive growth and operational efficiency. We
               combine creativity with technical expertise to deliver excellence in every project, helping our clients

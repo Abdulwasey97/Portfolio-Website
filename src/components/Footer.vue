@@ -78,7 +78,7 @@
             <div class="col-12 text-center py-3">
               <p class="copyright mb-0">
               
-              CodeWorld360 © {{ currentYear }} - All Rights Reserved
+              Prime Cloud Technologies © {{ currentYear }} - All Rights Reserved
               </p>
             </div>
           </div>

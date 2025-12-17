@@ -18,7 +18,7 @@
           <div class="col-lg-6 mb-4 mb-lg-0">
             <h2 class="section-heading">Our Mission</h2>
             <p class="section-text">
-              At CodeWorld360, our mission is to transform the way people and businesses interact with technology. We
+              At Prime Cloud Technologies, our mission is to transform the way people and businesses interact with technology. We
               strive to make every process, service, and experience fully digital, seamless, and efficient.
             </p>
             <p class="section-text">
