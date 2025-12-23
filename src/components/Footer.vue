@@ -6,7 +6,7 @@
             <!-- Logo Section -->
             <div class="col-lg-3 col-md-6 mb-4 logo-column">
               <div class="logo-section">
-                <img src="/logo.png" alt="MyPortfolio Logo" class="footer-logo">
+                <img src="/logo1.png" alt="MyPortfolio Logo" class="footer-logo">
               </div>
             </div>
 
@@ -157,11 +157,17 @@ const iconPaths = {
 
 .logo-section {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vertically center the logo within the row */
+.footer-links-row {
+  align-items: center;
 }
 
 .footer-logo {
-  max-width: 180px;
+  max-width: 280px;
   height: auto;
   transition: opacity 0.3s;
 }

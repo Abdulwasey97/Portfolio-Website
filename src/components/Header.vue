@@ -5,7 +5,13 @@
   >
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <router-link class="navbar-brand fw-bold text-primary" to="/">Prime Cloud Technologies</router-link>
+        <router-link class="navbar-brand fw-bold text-primary" to="/">
+          <img
+            src="/logo1.png"
+            alt="Prime Cloud Technologies"
+            class="img-fluid logo-img"
+          >
+        </router-link>
         <button 
           class="navbar-toggler" 
           type="button" 
@@ -216,7 +222,7 @@ onUnmounted(() => {
 }
 
 .navbar {
-  padding: 1rem 0;
+  padding: 0.6rem 0;
 }
 
 .nav-link {
@@ -275,6 +281,8 @@ onUnmounted(() => {
 }
 
 .navbar-brand {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -303,6 +311,25 @@ onUnmounted(() => {
 
 .navbar-brand:hover {
   transform: scale(1.05);
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Keep logo in original colors when links are green */
+.header-wrapper:not(.over-hero) .logo-img {
+  filter: none;
+}
+
+/* Switch logo to white when links are white over the hero */
+.header-wrapper.over-hero .logo-img {
+  /* Slightly brighten the white treatment for the logo over hero */
+  filter: brightness(0) invert(1) brightness(0.95);
 }
 
 /* Navbar toggler customization */
