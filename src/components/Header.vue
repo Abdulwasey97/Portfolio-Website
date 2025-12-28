@@ -392,6 +392,11 @@ onUnmounted(() => {
 
 /* Adjust for mobile */
 @media (max-width: 768px) {
+
+.logo-img {
+  max-width: 180px;
+}
+
   .header-wrapper.scrolled {
     width: 95%;
   }
