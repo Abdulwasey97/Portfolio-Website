@@ -6,7 +6,7 @@
             <!-- Logo Section -->
             <div class="col-lg-3 col-md-6 mb-4 logo-column">
               <div class="logo-section">
-                <img src="/logo1.png" alt="MyPortfolio Logo" class="footer-logo">
+                <img src="/logo2.png" alt="MyPortfolio Logo" class="footer-logo">
               </div>
             </div>
 

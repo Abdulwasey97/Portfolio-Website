@@ -7,7 +7,7 @@
       <div class="container">
         <router-link class="navbar-brand fw-bold text-primary" to="/">
           <img
-            src="/logo1.png"
+            src="/logo2.png"
             alt="Prime Cloud Technologies"
             class="img-fluid logo-img"
           >
@@ -316,7 +316,7 @@ onUnmounted(() => {
 .logo-img {
   height: 60px;
   width: auto;
-  max-width: 180px;
+  max-width: 80%;
   object-fit: contain;
   display: block;
 }
