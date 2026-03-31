@@ -63,62 +63,6 @@
       "demo": "#",
       "code": "#",
       "featured": false
-    },
-    {
-      "id": 5,
-      "title": "MapView Extension for Zoho Crm",
-      "description": "MapView gives you a bird’s-eye view of your CRM data by displaying Leads, Contacts, Accounts, Vendors, Deals, and Custom Modules on Google Maps. With bubble and heat maps, customizable address fields, and detailed field mapping, you can quickly analyze trends, view related info, and manage records by location—all in one unified map view.",
-      "image": "/Mapiew Screenshot.png",
-      "technologies": [
-        ".Net Framework",
-        ".Net Web API",
-        "React JS"
-      ],
-      "demo": "#",
-      "code": "#",
-      "featured": false
-    },
-    {
-      "id": 6,
-      "title": "Leadfinder Extension for Zoho Crm",
-      "description": "LeadFinder is a Zoho CRM extension that discovers new leads using keyword, location, and radius-based search. Powered by Google Places, it provides real-time business data, extracts emails from websites, shows results on maps or list views, and lets users instantly import leads into any CRM module.",
-      "image": "/Leadfinder Screenshot.png",
-      "technologies": [
-        ".Net Framework",
-        ".Net Web API",
-        "React JS"
-      ],
-      "demo": "#",
-      "code": "#",
-      "featured": false
-    },
-    {
-      "id": 7,
-      "title": "LinkedPro Extension for Zoho Crm",
-      "description": "LinkedPro lets you import LinkedIn connections or target profiles directly into Zoho CRM. Use advanced search and filters to find people by name, job, company, domain, or location, view detailed profiles, export to CSV, and sync selected contacts into your CRM with ease.",
-      "image": "/Screenshot-LinkedPro.png",
-      "technologies": [
-        ".Net Framework",
-        ".Net Web API",
-        "React JS"
-      ],
-      "demo": "#",
-      "code": "#",
-      "featured": false
-    },
-    {
-      "id": 8,
-      "title": "InboxWidget",
-      "description": "InboxWidget unifies Gmail, Outlook, Zoho, and other accounts into one workspace. It streamlines email management with smart tags, filters, thread association, and team assignments, letting you send, receive, organize, and collaborate without switching tabs.",
-      "image": "/InboxWIdget Screenshot.png",
-      "technologies": [
-        ".Net Framework",
-        ".Net Web API",
-        "React JS"
-      ],
-      "demo": "#",
-      "code": "#",
-      "featured": false
     }
   ]
 }
