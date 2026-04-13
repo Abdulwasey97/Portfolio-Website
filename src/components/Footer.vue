@@ -49,12 +49,8 @@
               <ul class="footer-links contact-info list-unstyled">
                 <li class="contact-detail">
                   <strong>Emails:</strong><br>
-                  <a href="mailto:abdulwaseyjaved@yahoo.com" class="email-link">
-                    abdulwaseyjaved@yahoo.com
-                  </a>
-                  <br>
-                  <a href="mailto:hassanofficial525@gmail.com" class="email-link">
-                    hassanofficial525@gmail.com
+                  <a href="mailto:info@primecloudtech.net" class="email-link">
+                    info@primecloudtech.net
                   </a>
                   <div class="social-icons mt-3" aria-label="Follow on social media">
                     <a
@@ -129,7 +125,7 @@ const navigateToSection = (event, sectionHash) => {
 const socialLinks = [
   { name: 'Instagram', url: 'https://www.instagram.com', icon: 'instagram' },
   { name: 'X (Twitter)', url: 'https://twitter.com', icon: 'x' },
-  { name: 'Facebook', url: 'https://www.facebook.com', icon: 'facebook' },
+  { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61577419782257', icon: 'facebook' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com', icon: 'linkedin' }
 ]
 
